@@ -1,0 +1,83 @@
+[
+    {
+      "name": "Sourdough Bread",
+      "category": "Bakery",
+      "price": 3.50,
+      "quantity": 40,
+      "supplier": "Artisan Bakers",
+      "expiration_date": "2024-11-30"
+    },
+    {
+      "name": "Croissant",
+      "category": "Bakery",
+      "price": 2.00,
+      "quantity": 60,
+      "supplier": "French Pastries",
+      "expiration_date": "2024-11-29"
+    },
+    {
+      "name": "Muffin",
+      "category": "Bakery",
+      "price": 1.50,
+      "quantity": 70,
+      "supplier": "Morning Delights",
+      "expiration_date": "2024-11-28"
+    },
+    {
+      "name": "Bagel",
+      "category": "Bakery",
+      "price": 1.00,
+      "quantity": 80,
+      "supplier": "Bagel Bros",
+      "expiration_date": "2024-11-30"
+    },
+    {
+      "name": "Danish Pastry",
+      "category": "Bakery",
+      "price": 2.50,
+      "quantity": 50,
+      "supplier": "Pastry Palace",
+      "expiration_date": "2024-11-27"
+    },
+    {
+      "name": "Baguette",
+      "category": "Bakery",
+      "price": 2.00,
+      "quantity": 55,
+      "supplier": "French Bakers",
+      "expiration_date": "2024-11-26"
+    },
+    {
+      "name": "Chocolate Cake",
+      "category": "Bakery",
+      "price": 15.00,
+      "quantity": 20,
+      "supplier": "Sweet Treats",
+      "expiration_date": "2024-12-01"
+    },
+    {
+      "name": "Donut",
+      "category": "Bakery",
+      "price": 1.20,
+      "quantity": 90,
+      "supplier": "Donut Shop",
+      "expiration_date": "2024-11-25"
+    },
+    {
+      "name": "Cinnamon Roll",
+      "category": "Bakery",
+      "price": 2.80,
+      "quantity": 65,
+      "supplier": "Bakery Bliss",
+      "expiration_date": "2024-11-27"
+    },
+    {
+      "name": "Apple Pie",
+      "category": "Bakery",
+      "price": 12.00,
+      "quantity": 30,
+      "supplier": "Pie Makers",
+      "expiration_date": "2024-12-02"
+    }
+  ]
+  

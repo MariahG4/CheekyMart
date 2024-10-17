@@ -1,0 +1,99 @@
+[
+    {
+      "name": "Chicken Breast",
+      "category": "Meat",
+      "price": 5.00,
+      "quantity": 100,
+      "supplier": "Poultry Farms",
+      "expiration_date": "2024-11-25"
+    },
+    {
+      "name": "Ground Beef",
+      "category": "Meat",
+      "price": 6.50,
+      "quantity": 80,
+      "supplier": "Cattle Co.",
+      "expiration_date": "2024-11-30"
+    },
+    {
+      "name": "Pork Chops",
+      "category": "Meat",
+      "price": 7.00,
+      "quantity": 90,
+      "supplier": "Piggy Ranch",
+      "expiration_date": "2024-11-28"
+    },
+    {
+      "name": "Salmon Fillet",
+      "category": "Seafood",
+      "price": 10.00,
+      "quantity": 60,
+      "supplier": "Ocean's Best",
+      "expiration_date": "2024-12-03"
+    },
+    {
+      "name": "Turkey Breast",
+      "category": "Meat",
+      "price": 8.00,
+      "quantity": 70,
+      "supplier": "Turkey Farms",
+      "expiration_date": "2024-12-01"
+    },
+    {
+      "name": "Steak",
+      "category": "Meat",
+      "price": 12.00,
+      "quantity": 50,
+      "supplier": "Cattle Co.",
+      "expiration_date": "2024-11-30"
+    },
+    {
+      "name": "Chicken Thighs",
+      "category": "Meat",
+      "price": 4.00,
+      "quantity": 120,
+      "supplier": "Poultry Farms",
+      "expiration_date": "2024-11-25"
+    },
+    {
+      "name": "Ham",
+      "category": "Meat",
+      "price": 6.00,
+      "quantity": 70,
+      "supplier": "Piggy Ranch",
+      "expiration_date": "2024-11-28"
+    },
+    {
+      "name": "Pork Sausage",
+      "category": "Meat",
+      "price": 5.50,
+      "quantity": 80,
+      "supplier": "Piggy Ranch",
+      "expiration_date": "2024-11-30"
+    },
+    {
+      "name": "Chicken Sausage",
+      "category": "Meat",
+      "price": 5.00,
+      "quantity": 90,
+      "supplier": "Poultry Farms",
+      "expiration_date": "2024-11-25"
+    },
+    {
+      "name": "Beef Chuck Roast",
+      "category": "Meat",
+      "price": 9.00,
+      "quantity": 60,
+      "supplier": "Cattle Co.",
+      "expiration_date": "2024-11-30"
+    },
+    {
+      "name": "Shrimp",
+      "category": "Seafood",
+      "price": 8.50,
+      "quantity": 100,
+      "supplier": "Ocean's Best",
+      "expiration_date": "2024-12-03"
+    }
+  ]
+  

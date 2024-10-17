@@ -1,0 +1,83 @@
+[
+    {
+      "name": "Espresso",
+      "category": "Coffee",
+      "price": 3.00,
+      "quantity": 40,
+      "supplier": "Coffee Roasters Ltd.",
+      "expiration_date": "2024-12-30"
+    },
+    {
+      "name": "Latte",
+      "category": "Coffee",
+      "price": 4.00,
+      "quantity": 35,
+      "supplier": "Coffee Roasters Ltd.",
+      "expiration_date": "2024-12-30"
+    },
+    {
+      "name": "Cappuccino",
+      "category": "Coffee",
+      "price": 4.50,
+      "quantity": 30,
+      "supplier": "Coffee Roasters Ltd.",
+      "expiration_date": "2024-12-30"
+    },
+    {
+      "name": "Cold Brew",
+      "category": "Coffee",
+      "price": 3.50,
+      "quantity": 50,
+      "supplier": "Cold Brew Co.",
+      "expiration_date": "2024-12-25"
+    },
+    {
+      "name": "Black Tea",
+      "category": "Tea",
+      "price": 2.00,
+      "quantity": 60,
+      "supplier": "Tea Traders",
+      "expiration_date": "2024-12-20"
+    },
+    {
+      "name": "Green Tea",
+      "category": "Tea",
+      "price": 2.50,
+      "quantity": 55,
+      "supplier": "Tea Traders",
+      "expiration_date": "2024-12-20"
+    },
+    {
+      "name": "Chamomile Tea",
+      "category": "Tea",
+      "price": 2.80,
+      "quantity": 50,
+      "supplier": "Herbal Teas Co.",
+      "expiration_date": "2024-12-18"
+    },
+    {
+      "name": "Matcha Latte",
+      "category": "Tea",
+      "price": 5.00,
+      "quantity": 40,
+      "supplier": "Tea Traders",
+      "expiration_date": "2024-12-20"
+    },
+    {
+      "name": "Chai Tea",
+      "category": "Tea",
+      "price": 3.00,
+      "quantity": 45,
+      "supplier": "Spice Blends",
+      "expiration_date": "2024-12-22"
+    },
+    {
+      "name": "Earl Grey",
+      "category": "Tea",
+      "price": 2.70,
+      "quantity": 50,
+      "supplier": "Tea Traders",
+      "expiration_date": "2024-12-20"
+    }
+  ]
+  

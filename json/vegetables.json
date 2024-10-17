@@ -1,0 +1,99 @@
+[
+    {
+      "name": "Carrot",
+      "category": "Vegetables",
+      "price": 0.30,
+      "quantity": 150,
+      "supplier": "Vegetable Gardens",
+      "expiration_date": "2024-12-15"
+    },
+    {
+      "name": "Broccoli",
+      "category": "Vegetables",
+      "price": 0.75,
+      "quantity": 80,
+      "supplier": "Green Farms",
+      "expiration_date": "2024-12-10"
+    },
+    {
+      "name": "Spinach",
+      "category": "Vegetables",
+      "price": 1.20,
+      "quantity": 100,
+      "supplier": "Leafy Greens Co.",
+      "expiration_date": "2024-12-07"
+    },
+    {
+      "name": "Russet Potato",
+      "category": "Vegetables",
+      "price": 0.50,
+      "quantity": 100,
+      "supplier": "Root Veggie Supplies",
+      "expiration_date": "2024-12-20"
+    },
+    {
+      "name": "Sweet Potato",
+      "category": "Vegetables",
+      "price": 0.60,
+      "quantity": 100,
+      "supplier": "Root Veggie Supplies",
+      "expiration_date": "2024-12-20"
+    },
+    {
+      "name": "Tomato",
+      "category": "Vegetables",
+      "price": 0.40,
+      "quantity": 180,
+      "supplier": "Sunny Farms",
+      "expiration_date": "2024-12-12"
+    },
+    {
+      "name": "Onion",
+      "category": "Vegetables",
+      "price": 0.20,
+      "quantity": 200,
+      "supplier": "Allium Growers",
+      "expiration_date": "2024-12-15"
+    },
+    {
+      "name": "Bell Pepper",
+      "category": "Vegetables",
+      "price": 0.50,
+      "quantity": 150,
+      "supplier": "Pepper Patch",
+      "expiration_date": "2024-12-12"
+    },
+    {
+      "name": "Bok Choy",
+      "category": "Vegetables",
+      "price": 1.00,
+      "quantity": 80,
+      "supplier": "Leafy Greens Co.",
+      "expiration_date": "2024-12-07"
+    },
+    {
+      "name": "Cabbage",
+      "category": "Vegetables",
+      "price": 0.75,
+      "quantity": 90,
+      "supplier": "Green Farms",
+      "expiration_date": "2024-12-10"
+    },
+    {
+      "name": "Collard Greens",
+      "category": "Vegetables",
+      "price": 1.50,
+      "quantity": 70,
+      "supplier": "Leafy Greens Co.",
+      "expiration_date": "2024-12-07"
+    },
+    {
+      "name": "Cucumber",
+      "category": "Vegetables",
+      "price": 0.30,
+      "quantity": 180,
+      "supplier": "Cool Cucumbers Ltd.",
+      "expiration_date": "2024-12-12"
+    }
+  ]
+  

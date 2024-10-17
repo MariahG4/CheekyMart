@@ -1,0 +1,106 @@
+[
+    {
+        "name": "Whole Milk",
+        "category": "Dairy",
+        "price": 2.50,
+        "quantity": 50,
+        "supplier": "Dairy Farmers Co-op",
+        "expiration_date": "2024-11-30"
+    },
+    {
+        "name": "2% Milk",
+        "category": "Dairy",
+        "price": 2.30,
+        "quantity": 50,
+        "supplier": "Dairy Farmers Co-op",
+        "expiration_date": "2024-12-01"
+    },
+    {
+        "name": "Skim Milk",
+        "category": "Dairy",
+        "price": 2.20,
+        "quantity": 50,
+        "supplier": "Dairy Farmers Co-op",
+        "expiration_date": "2024-12-01"
+    },
+    {
+        "name": "Eggs",
+        "category": "Dairy",
+        "price": 2.50,
+        "quantity": 100,
+        "supplier": "Farm Fresh",
+        "expiration_date": "2024-12-10"
+    },
+    {
+        "name": "Greek Yogurt",
+        "category": "Dairy",
+        "price": 3.00,
+        "quantity": 80,
+        "supplier": "Yogurt Bliss",
+        "expiration_date": "2024-12-05"
+    },
+    {
+        "name": "Cheddar Cheese",
+        "category": "Dairy",
+        "price": 4.00,
+        "quantity": 60,
+        "supplier": "Cheese Masters",
+        "expiration_date": "2024-12-20"
+    },
+    {
+        "name": "Butter",
+        "category": "Dairy",
+        "price": 3.50,
+        "quantity": 70,
+        "supplier": "Creamery Co.",
+        "expiration_date": "2024-12-15"
+    },
+    {
+        "name": "Sour Cream",
+        "category": "Dairy",
+        "price": 2.00,
+        "quantity": 50,
+        "supplier": "Dairy Delight",
+        "expiration_date": "2024-12-08"
+    },
+    {
+        "name": "Mozzarella Cheese",
+        "category": "Dairy",
+        "price": 4.50,
+        "quantity": 60,
+        "supplier": "Cheese Masters",
+        "expiration_date": "2024-12-20"
+    },
+    {
+        "name": "Cottage Cheese",
+        "category": "Dairy",
+        "price": 3.20,
+        "quantity": 40,
+        "supplier": "Dairy Delight",
+        "expiration_date": "2024-12-10"
+    },
+    {
+        "name": "Cream Cheese",
+        "category": "Dairy",
+        "price": 3.00,
+        "quantity": 50,
+        "supplier": "Creamery Co.",
+        "expiration_date": "2024-12-12"
+    },
+    {
+        "name": "Whipped Cream",
+        "category": "Dairy",
+        "price": 2.80,
+        "quantity": 30,
+        "supplier": "Dairy Delight",
+        "expiration_date": "2024-12-09"
+    },
+    {
+        "name": "Provolone Cheese",
+        "category": "Dairy",
+        "price": 4.20,
+        "quantity": 45,
+        "supplier": "Cheese Masters",
+        "expiration_date": "2024-12-18"
+    }
+]

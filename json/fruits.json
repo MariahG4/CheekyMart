@@ -1,0 +1,59 @@
+[
+    {
+      "name": "Apple",
+      "category": "Fruits",
+      "price": 0.25,
+      "quantity": 200,
+      "supplier": "Orchard Inc.",
+      "expiration_date": "2024-12-10"
+    },
+    {
+      "name": "Banana",
+      "category": "Fruits",
+      "price": 0.15,
+      "quantity": 300,
+      "supplier": "Tropical Traders",
+      "expiration_date": "2024-12-12"
+    },
+    {
+      "name": "Orange",
+      "category": "Fruits",
+      "price": 0.35,
+      "quantity": 250,
+      "supplier": "Citrus Co.",
+      "expiration_date": "2024-12-15"
+    },
+    {
+      "name": "Strawberry",
+      "category": "Fruits",
+      "price": 1.00,
+      "quantity": 150,
+      "supplier": "Berry Fields",
+      "expiration_date": "2024-12-05"
+    },
+    {
+      "name": "Grape",
+      "category": "Fruits",
+      "price": 2.00,
+      "quantity": 100,
+      "supplier": "Vineyard Supplies",
+      "expiration_date": "2024-12-07"
+    },
+    {
+      "name": "Pineapple",
+      "category": "Fruits",
+      "price": 1.50,
+      "quantity": 50,
+      "supplier": "Tropical Traders",
+      "expiration_date": "2024-12-20"
+    },
+    {
+      "name": "Mango",
+      "category": "Fruits",
+      "price": 1.75,
+      "quantity": 70,
+      "supplier": "Tropical Traders",
+      "expiration_date": "2024-12-18"
+    }
+  ]
+  

@@ -1,0 +1,90 @@
+[
+    {
+        "name": "Almond Milk",
+        "category": "Non-Dairy",
+        "price": 3.00,
+        "quantity": 30,
+        "supplier": "Nutty Delights",
+        "expiration_date": "2024-12-10"
+    },
+    {
+        "name": "Oat Milk",
+        "category": "Non-Dairy",
+        "price": 2.80,
+        "quantity": 30,
+        "supplier": "Grain Goodness",
+        "expiration_date": "2024-12-10"
+    },
+    {
+        "name": "Soy Milk",
+        "category": "Non-Dairy",
+        "price": 2.90,
+        "quantity": 30,
+        "supplier": "Bean Brews",
+        "expiration_date": "2024-12-10"
+    },
+    {
+        "name": "Tofu",
+        "category": "Meat Alternatives",
+        "price": 2.50,
+        "quantity": 80,
+        "supplier": "Soy Goodness",
+        "expiration_date": "2024-12-15"
+    },
+    {
+        "name": "Tempeh",
+        "category": "Meat Alternatives",
+        "price": 3.50,
+        "quantity": 60,
+        "supplier": "Fermented Foods",
+        "expiration_date": "2024-12-10"
+    },
+    {
+        "name": "Seitan",
+        "category": "Meat Alternatives",
+        "price": 4.00,
+        "quantity": 50,
+        "supplier": "Wheat Wonders",
+        "expiration_date": "2024-12-12"
+    },
+    {
+        "name": "Beyond Burger",
+        "category": "Meat Alternatives",
+        "price": 6.00,
+        "quantity": 40,
+        "supplier": "Beyond Meat",
+        "expiration_date": "2024-12-20"
+    },
+    {
+        "name": "Impossible Burger",
+        "category": "Meat Alternatives",
+        "price": 6.50,
+        "quantity": 45,
+        "supplier": "Impossible Foods",
+        "expiration_date": "2024-12-18"
+    },
+    {
+        "name": "Soy Sausage",
+        "category": "Meat Alternatives",
+        "price": 4.50,
+        "quantity": 70,
+        "supplier": "Soy Goodness",
+        "expiration_date": "2024-12-13"
+    },
+    {
+        "name": "Quorn Chicken",
+        "category": "Meat Alternatives",
+        "price": 5.00,
+        "quantity": 55,
+        "supplier": "Quorn Foods",
+        "expiration_date": "2024-12-17"
+    },
+    {
+        "name": "Jackfruit Pulled Pork",
+        "category": "Meat Alternatives",
+        "price": 4.20,
+        "quantity": 65,
+        "supplier": "Tropical Treats",
+        "expiration_date": "2024-12-14"
+    }
+]
