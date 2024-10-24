@@ -5,7 +5,8 @@
       "price": 0.25,
       "quantity": 200,
       "supplier": "Orchard Inc.",
-      "expiration_date": "2024-12-10"
+      "expiration_date": "2024-12-10",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Red_Apple.jpg/640px-Red_Apple.jpg"
     },
     {
       "name": "Banana",
@@ -13,7 +14,8 @@
       "price": 0.15,
       "quantity": 300,
       "supplier": "Tropical Traders",
-      "expiration_date": "2024-12-12"
+      "expiration_date": "2024-12-12",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Bananas_on_black_background_02.jpg/640px-Bananas_on_black_background_02.jpg"
     },
     {
       "name": "Orange",
@@ -21,7 +23,8 @@
       "price": 0.35,
       "quantity": 250,
       "supplier": "Citrus Co.",
-      "expiration_date": "2024-12-15"
+      "expiration_date": "2024-12-15",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Orange_--_2022_--_9715.jpg/640px-Orange_--_2022_--_9715.jpg"
     },
     {
       "name": "Strawberry",
@@ -29,7 +32,8 @@
       "price": 1.00,
       "quantity": 150,
       "supplier": "Berry Fields",
-      "expiration_date": "2024-12-05"
+      "expiration_date": "2024-12-05",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Still_life_with_strawberries_in_a_crystal_bowl.jpg/640px-Still_life_with_strawberries_in_a_crystal_bowl.jpg"
     },
     {
       "name": "Grape",
@@ -37,7 +41,8 @@
       "price": 2.00,
       "quantity": 100,
       "supplier": "Vineyard Supplies",
-      "expiration_date": "2024-12-07"
+      "expiration_date": "2024-12-07",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Pinot_Grigio-20201027-RM-114053.jpg/640px-Pinot_Grigio-20201027-RM-114053.jpg"
     },
     {
       "name": "Pineapple",
@@ -45,7 +50,8 @@
       "price": 1.50,
       "quantity": 50,
       "supplier": "Tropical Traders",
-      "expiration_date": "2024-12-20"
+      "expiration_date": "2024-12-20",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/AnanasComosusOnPlant.jpg/640px-AnanasComosusOnPlant.jpg"
     },
     {
       "name": "Mango",
@@ -53,7 +59,8 @@
       "price": 1.75,
       "quantity": 70,
       "supplier": "Tropical Traders",
-      "expiration_date": "2024-12-18"
+      "expiration_date": "2024-12-18",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Mangos_-_single_and_halved.jpg/640px-Mangos_-_single_and_halved.jpg"
     }
   ]
   

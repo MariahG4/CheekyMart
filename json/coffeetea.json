@@ -5,7 +5,8 @@
       "price": 3.00,
       "quantity": 40,
       "supplier": "Coffee Roasters Ltd.",
-      "expiration_date": "2024-12-30"
+      "expiration_date": "2024-12-30",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Espresso_BW_1.jpg/640px-Espresso_BW_1.jpg"
     },
     {
       "name": "Latte",
@@ -13,7 +14,8 @@
       "price": 4.00,
       "quantity": 35,
       "supplier": "Coffee Roasters Ltd.",
-      "expiration_date": "2024-12-30"
+      "expiration_date": "2024-12-30",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Caff%C3%A8_latte_Michele%E2%80%99s_Caf%C3%A9_Cookham.jpg/640px-Caff%C3%A8_latte_Michele%E2%80%99s_Caf%C3%A9_Cookham.jpg"
     },
     {
       "name": "Cappuccino",
@@ -21,7 +23,8 @@
       "price": 4.50,
       "quantity": 30,
       "supplier": "Coffee Roasters Ltd.",
-      "expiration_date": "2024-12-30"
+      "expiration_date": "2024-12-30",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/The_Mocha_Nut_-_November_2023_-_Sarah_Stierch_05.jpg/640px-The_Mocha_Nut_-_November_2023_-_Sarah_Stierch_05.jpg"
     },
     {
       "name": "Cold Brew",
@@ -29,7 +32,8 @@
       "price": 3.50,
       "quantity": 50,
       "supplier": "Cold Brew Co.",
-      "expiration_date": "2024-12-25"
+      "expiration_date": "2024-12-25",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Iced_cold_brew_coffee.jpg/640px-Iced_cold_brew_coffee.jpg"
     },
     {
       "name": "Black Tea",
@@ -37,7 +41,8 @@
       "price": 2.00,
       "quantity": 60,
       "supplier": "Tea Traders",
-      "expiration_date": "2024-12-20"
+      "expiration_date": "2024-12-20",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Cup_of_black_tea.JPG/640px-Cup_of_black_tea.JPG"
     },
     {
       "name": "Green Tea",
@@ -45,7 +50,8 @@
       "price": 2.50,
       "quantity": 55,
       "supplier": "Tea Traders",
-      "expiration_date": "2024-12-20"
+      "expiration_date": "2024-12-20",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Boseong_green_tea.jpg/640px-Boseong_green_tea.jpg"
     },
     {
       "name": "Chamomile Tea",
@@ -53,7 +59,8 @@
       "price": 2.80,
       "quantity": 50,
       "supplier": "Herbal Teas Co.",
-      "expiration_date": "2024-12-18"
+      "expiration_date": "2024-12-18",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Yuja_chamomile_tea.jpg/640px-Yuja_chamomile_tea.jpg"
     },
     {
       "name": "Matcha Latte",
@@ -61,7 +68,8 @@
       "price": 5.00,
       "quantity": 40,
       "supplier": "Tea Traders",
-      "expiration_date": "2024-12-20"
+      "expiration_date": "2024-12-20",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Matcha_tea_latte_with_rosetta_latte_art.jpg/640px-Matcha_tea_latte_with_rosetta_latte_art.jpg"
     },
     {
       "name": "Chai Tea",
@@ -69,7 +77,8 @@
       "price": 3.00,
       "quantity": 45,
       "supplier": "Spice Blends",
-      "expiration_date": "2024-12-22"
+      "expiration_date": "2024-12-22",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Chai_%28Tea%29_3.jpg/640px-Chai_%28Tea%29_3.jpg"
     },
     {
       "name": "Earl Grey",
@@ -77,7 +86,8 @@
       "price": 2.70,
       "quantity": 50,
       "supplier": "Tea Traders",
-      "expiration_date": "2024-12-20"
+      "expiration_date": "2024-12-20",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Mug_of_Earl_Grey_tea%2C_Cafe_Express%2C_York_Way%2C_London%2C_England_01.jpg/640px-Mug_of_Earl_Grey_tea%2C_Cafe_Express%2C_York_Way%2C_London%2C_England_01.jpg"
     }
   ]
   

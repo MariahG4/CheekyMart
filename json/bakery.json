@@ -5,7 +5,8 @@
       "price": 3.50,
       "quantity": 40,
       "supplier": "Artisan Bakers",
-      "expiration_date": "2024-11-30"
+      "expiration_date": "2024-11-30",
+      "image": "https://tse1.mm.bing.net/th?id=OIP.S0q6FCFcqEOZMcswAODJFgHaGP&pid=Api&P=0&h=220"
     },
     {
       "name": "Croissant",
@@ -13,7 +14,8 @@
       "price": 2.00,
       "quantity": 60,
       "supplier": "French Pastries",
-      "expiration_date": "2024-11-29"
+      "expiration_date": "2024-11-29",
+      "image": "https://www.theflavorbender.com/wp-content/uploads/2020/05/French-Croissants-SM-2363.jpg"
     },
     {
       "name": "Muffin",
@@ -21,7 +23,8 @@
       "price": 1.50,
       "quantity": 70,
       "supplier": "Morning Delights",
-      "expiration_date": "2024-11-28"
+      "expiration_date": "2024-11-28",
+      "image": "https://tse2.mm.bing.net/th?id=OIP.7IALesM5gCfyV_VOvQdb5gHaHa&pid=Api&P=0&h=220"
     },
     {
       "name": "Bagel",
@@ -29,7 +32,8 @@
       "price": 1.00,
       "quantity": 80,
       "supplier": "Bagel Bros",
-      "expiration_date": "2024-11-30"
+      "expiration_date": "2024-11-30",
+      "image": "https://sugarspunrun.com/wp-content/uploads/2020/02/homemade-bagels-recipe-1-of-1-2.jpg"
     },
     {
       "name": "Danish Pastry",
@@ -37,7 +41,8 @@
       "price": 2.50,
       "quantity": 50,
       "supplier": "Pastry Palace",
-      "expiration_date": "2024-11-27"
+      "expiration_date": "2024-11-27",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Glazed_apple_Danish.jpg/1200px-Glazed_apple_Danish.jpg?20220823221922"
     },
     {
       "name": "Baguette",
@@ -45,7 +50,8 @@
       "price": 2.00,
       "quantity": 55,
       "supplier": "French Bakers",
-      "expiration_date": "2024-11-26"
+      "expiration_date": "2024-11-26",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Baguettes_-_stonesoup.jpg/640px-Baguettes_-_stonesoup.jpg"
     },
     {
       "name": "Chocolate Cake",
@@ -53,7 +59,8 @@
       "price": 15.00,
       "quantity": 20,
       "supplier": "Sweet Treats",
-      "expiration_date": "2024-12-01"
+      "expiration_date": "2024-12-01",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Quinoa_Chocolate_Cake_CCBYSA2_Karen_Neo.jpg/640px-Quinoa_Chocolate_Cake_CCBYSA2_Karen_Neo.jpg"
     },
     {
       "name": "Donut",
@@ -61,7 +68,8 @@
       "price": 1.20,
       "quantity": 90,
       "supplier": "Donut Shop",
-      "expiration_date": "2024-11-25"
+      "expiration_date": "2024-11-25",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Glazed-Donut.jpg/640px-Glazed-Donut.jpg"
     },
     {
       "name": "Cinnamon Roll",
@@ -69,7 +77,8 @@
       "price": 2.80,
       "quantity": 65,
       "supplier": "Bakery Bliss",
-      "expiration_date": "2024-11-27"
+      "expiration_date": "2024-11-27",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Cinnamon_roll-Cinnabon.jpg/640px-Cinnamon_roll-Cinnabon.jpg"
     },
     {
       "name": "Apple Pie",
@@ -77,7 +86,8 @@
       "price": 12.00,
       "quantity": 30,
       "supplier": "Pie Makers",
-      "expiration_date": "2024-12-02"
+      "expiration_date": "2024-12-02",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Apple_pie_24.jpg/640px-Apple_pie_24.jpg"
     }
   ]
   

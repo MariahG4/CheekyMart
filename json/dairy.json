@@ -5,7 +5,8 @@
         "price": 2.50,
         "quantity": 50,
         "supplier": "Dairy Farmers Co-op",
-        "expiration_date": "2024-11-30"
+        "expiration_date": "2024-11-30",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Whole_milk_aisle_%2817132962560%29.jpg/640px-Whole_milk_aisle_%2817132962560%29.jpg"
     },
     {
         "name": "2% Milk",
@@ -13,7 +14,8 @@
         "price": 2.30,
         "quantity": 50,
         "supplier": "Dairy Farmers Co-op",
-        "expiration_date": "2024-12-01"
+        "expiration_date": "2024-12-01",
+        "image": "https://images.freshop.com/00041900076610/ac4fec5776fd7fddc43c702dfc072c09_large.png"
     },
     {
         "name": "Skim Milk",
@@ -21,7 +23,8 @@
         "price": 2.20,
         "quantity": 50,
         "supplier": "Dairy Farmers Co-op",
-        "expiration_date": "2024-12-01"
+        "expiration_date": "2024-12-01",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Skimmed_milk.jpg/640px-Skimmed_milk.jpg"
     },
     {
         "name": "Eggs",
@@ -29,7 +32,8 @@
         "price": 2.50,
         "quantity": 100,
         "supplier": "Farm Fresh",
-        "expiration_date": "2024-12-10"
+        "expiration_date": "2024-12-10",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/2020-05-05_19_27_12_An_open_carton_of_a_dozen_Large_Grade_A_Chicken_Eggs_from_Egg-land%27s_Best_in_the_Franklin_Farm_section_of_Oak_Hill%2C_Fairfax_County%2C_Virginia.jpg/640px-thumbnail.jpg"
     },
     {
         "name": "Greek Yogurt",
@@ -37,7 +41,8 @@
         "price": 3.00,
         "quantity": 80,
         "supplier": "Yogurt Bliss",
-        "expiration_date": "2024-12-05"
+        "expiration_date": "2024-12-05",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Turkish_strained_yogurt.jpg/640px-Turkish_strained_yogurt.jpg"
     },
     {
         "name": "Cheddar Cheese",
@@ -45,7 +50,8 @@
         "price": 4.00,
         "quantity": 60,
         "supplier": "Cheese Masters",
-        "expiration_date": "2024-12-20"
+        "expiration_date": "2024-12-20",
+        "image": "https://thecheesewanker.com/wp-content/uploads/2021/12/Cheese-cheddar-e1639449389970-1536x1226.jpg"
     },
     {
         "name": "Butter",
@@ -53,7 +59,8 @@
         "price": 3.50,
         "quantity": 70,
         "supplier": "Creamery Co.",
-        "expiration_date": "2024-12-15"
+        "expiration_date": "2024-12-15",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/NCI_butter.jpg/640px-NCI_butter.jpg"
     },
     {
         "name": "Sour Cream",
@@ -61,7 +68,8 @@
         "price": 2.00,
         "quantity": 50,
         "supplier": "Dairy Delight",
-        "expiration_date": "2024-12-08"
+        "expiration_date": "2024-12-08",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Sour_cream.jpg/640px-Sour_cream.jpg"
     },
     {
         "name": "Mozzarella Cheese",
@@ -69,7 +77,8 @@
         "price": 4.50,
         "quantity": 60,
         "supplier": "Cheese Masters",
-        "expiration_date": "2024-12-20"
+        "expiration_date": "2024-12-20",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Mozzarella_cheese.jpg/640px-Mozzarella_cheese.jpg"
     },
     {
         "name": "Cottage Cheese",
@@ -77,7 +86,8 @@
         "price": 3.20,
         "quantity": 40,
         "supplier": "Dairy Delight",
-        "expiration_date": "2024-12-10"
+        "expiration_date": "2024-12-10",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Cottage_Cheese_homemade.jpg/640px-Cottage_Cheese_homemade.jpg"
     },
     {
         "name": "Cream Cheese",
@@ -85,7 +95,8 @@
         "price": 3.00,
         "quantity": 50,
         "supplier": "Creamery Co.",
-        "expiration_date": "2024-12-12"
+        "expiration_date": "2024-12-12",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Philly_cream_cheese.jpg/640px-Philly_cream_cheese.jpg"
     },
     {
         "name": "Whipped Cream",
@@ -93,7 +104,8 @@
         "price": 2.80,
         "quantity": 30,
         "supplier": "Dairy Delight",
-        "expiration_date": "2024-12-09"
+        "expiration_date": "2024-12-09",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Vegan_whipped_cream.jpg/640px-Vegan_whipped_cream.jpg"
     },
     {
         "name": "Provolone Cheese",
@@ -101,6 +113,7 @@
         "price": 4.20,
         "quantity": 45,
         "supplier": "Cheese Masters",
-        "expiration_date": "2024-12-18"
+        "expiration_date": "2024-12-18",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Provolone_layered.jpg/640px-Provolone_layered.jpg"
     }
 ]
