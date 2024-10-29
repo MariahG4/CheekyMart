@@ -20,7 +20,7 @@ fruitsButton.addEventListener('click', () => {
 });
 
 const meatButton = document.querySelector('.meat-btn');
-icedButton.addEventListener('click', () => {
+meatButton.addEventListener('click', () => {
     fetchData('json/meat.json');
 });
 
@@ -41,8 +41,51 @@ async function fetchData (fileName) {
             throw Error(`Error: ${response.url} ${response.statusText}`)
         }
         const data = await response.json();
-        addDrinks(data);
+        addProducts(data);
     } catch (error) {
         console.log(error.message);
     }
+}
+
+function addProducts(products) {
+    const container = document.querySelector('.products-container');
+    container.innerHTML = '';
+
+    products.forEach((product) => {
+        const article = document.createElement('article');
+        article.classList.add('card');
+
+        const img = document.createElement('img');
+        img.src = product.image; // image source
+        img.alt = product.name; // if image doesn't show up
+        article.appendChild(img);
+
+        const productContent = document.createElement('div');
+        productContent.classList.add('content');
+
+        const title = document.createElement('h3');
+        title.textContent = product.name;
+
+        const price = document.createElement('p');
+        price.textContent = "$" + product.price;
+        price.style.textAlign = "center";
+
+        const category = document.createElement('p');
+        category.textContent = product.category;
+        category.style.textAlign = "center";
+
+        const button = document.createElement('button');
+        button.textContent = "Add to cart";
+        button.style.backgroundColor = "green";
+        button.style.color = "white";
+        button.style.borderRadius = "10px 10px 10px 10px";
+
+
+        article.appendChild(productContent);
+        productContent.appendChild(title);
+        productContent.appendChild(price);
+        productContent.appendChild(category);
+        productContent.appendChild(button);
+        container.appendChild(article);
+    });
 }
