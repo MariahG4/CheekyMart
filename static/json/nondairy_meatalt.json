@@ -5,7 +5,8 @@
         "price": 3.00,
         "quantity": 30,
         "supplier": "Nutty Delights",
-        "expiration_date": "2024-12-10"
+        "expiration_date": "2024-12-10",
+        "image": "static/productimages/almond milk.jpg"
     },
     {
         "name": "Oat Milk",
@@ -13,7 +14,8 @@
         "price": 2.80,
         "quantity": 30,
         "supplier": "Grain Goodness",
-        "expiration_date": "2024-12-10"
+        "expiration_date": "2024-12-10",
+        "image": "static/productimages/oat milk.jpg"
     },
     {
         "name": "Soy Milk",
@@ -21,7 +23,8 @@
         "price": 2.90,
         "quantity": 30,
         "supplier": "Bean Brews",
-        "expiration_date": "2024-12-10"
+        "expiration_date": "2024-12-10",
+        "image": "static/productimages/soy milk.jpg"
     },
     {
         "name": "Tofu",
@@ -29,7 +32,8 @@
         "price": 2.50,
         "quantity": 80,
         "supplier": "Soy Goodness",
-        "expiration_date": "2024-12-15"
+        "expiration_date": "2024-12-15",
+        "image": "static/productimages/tofu.jpg"
     },
     {
         "name": "Tempeh",
@@ -37,7 +41,8 @@
         "price": 3.50,
         "quantity": 60,
         "supplier": "Fermented Foods",
-        "expiration_date": "2024-12-10"
+        "expiration_date": "2024-12-10",
+        "image": "static/productimages/tempeh.jpg"
     },
     {
         "name": "Seitan",
@@ -45,7 +50,8 @@
         "price": 4.00,
         "quantity": 50,
         "supplier": "Wheat Wonders",
-        "expiration_date": "2024-12-12"
+        "expiration_date": "2024-12-12",
+        "image": "static/productimages/seitan.jpg"
     },
     {
         "name": "Beyond Burger",
@@ -53,7 +59,8 @@
         "price": 6.00,
         "quantity": 40,
         "supplier": "Beyond Meat",
-        "expiration_date": "2024-12-20"
+        "expiration_date": "2024-12-20",
+        "image": "static/productimages/beyond.jpg"
     },
     {
         "name": "Impossible Burger",
@@ -61,7 +68,8 @@
         "price": 6.50,
         "quantity": 45,
         "supplier": "Impossible Foods",
-        "expiration_date": "2024-12-18"
+        "expiration_date": "2024-12-18",
+        "image": "https://tse2.mm.bing.net/th?id=OIP.Y5Ilvk-AEb9flxnawCwd-QHaFh&pid=Api&P=0&h=220"
     },
     {
         "name": "Soy Sausage",
@@ -69,7 +77,8 @@
         "price": 4.50,
         "quantity": 70,
         "supplier": "Soy Goodness",
-        "expiration_date": "2024-12-13"
+        "expiration_date": "2024-12-13",
+        "image": "static/productimages/soy sausage.jpg"
     },
     {
         "name": "Quorn Chicken",
@@ -77,7 +86,8 @@
         "price": 5.00,
         "quantity": 55,
         "supplier": "Quorn Foods",
-        "expiration_date": "2024-12-17"
+        "expiration_date": "2024-12-17",
+        "image": "static/productimages/quorn chicken.jpg"
     },
     {
         "name": "Jackfruit Pulled Pork",
@@ -85,6 +95,7 @@
         "price": 4.20,
         "quantity": 65,
         "supplier": "Tropical Treats",
-        "expiration_date": "2024-12-14"
+        "expiration_date": "2024-12-14",
+        "image": "static/productimages/jackfruit pulled pork.jpg"
     }
 ]

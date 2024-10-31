@@ -4,22 +4,22 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>CheekyMart</title>
-        <link rel="logo" type="image/x-icon" href="images/logo.jpg">
-        <link href="stylesheets/homestyle.css" rel="stylesheet">
-        <script src="script.js" defer></script>
+        <link rel="logo" type="image/x-icon" href="static/images/logo.jpg">
+        <link href="{{ url_for('static', filename='homestyle.css') }}" rel="stylesheet">
+        <script src="{{ url_for('static', filename='scripts/script.js') }}" defer></script>
     </head>
 <body>
     <header>
         <div class="logo">
-            <img class="logo" src="images/logo.png" alt="logo" width="150" height="200">
+            <img class="logo" src="static/images/logo.png" alt="logo" width="150" height="200">
         </div>
         <nav>
             <ul>
-                <li><a href="homepage.html">Home</a></li>
-                <li><a href="search.html">Search</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="account.html">Account</a></li>
-                <li><a href="cart.html" class="cart-button">Cart</a></li>
+                <li><a href="..">Home</a></li>
+                <li><a href="search">Search</a></li>
+                <li><a href="products">Products</a></li>
+                <li><a href="account">Account</a></li>
+                <li><a href="cart" class="cart-button">Cart</a></li>
             </ul>
         </nav>
     </header>
@@ -35,7 +35,7 @@
             CheekyMart has everything ready for you to collect at your convenience. Your hunger, our cart, 
             ready when you are. So what are you waiting for?
           </p>
-          <a href="search.html"><button>Browse Products</button></a>
+          <a href="search"><button>Browse Products</button></a>
         </div>
     </section>
     
@@ -44,22 +44,22 @@
         <h2>Our Founders</h2>
         <div class="founder-grid">
           <div class="founder-card">
-            <div class="founder-image"><img class="logo" src="images/logo.png" alt="logo" width="200" height="150"></div>
+            <div class="founder-image"><img class="logo" src="static/images/logo.png" alt="logo" width="200" height="150"></div>
             <h3>Alex Schieck</h3>
             <p>Project Manager</p>
           </div>
           <div class="founder-card">
-            <div class="founder-image"><img class="logo" src="images/logo.png" alt="logo" width="200" height="150"></div>
+            <div class="founder-image"><img class="logo" src="static/images/logo.png" alt="logo" width="200" height="150"></div>
             <h3>Besan Rammounieh</h3>
             <p>Frontend Developer</p>
           </div>
           <div class="founder-card">
-            <div class="founder-image"><img class="logo" src="images/logo.png" alt="logo" width="200" height="150"></div>
+            <div class="founder-image"><img class="logo" src="static/images/logo.png" alt="logo" width="200" height="150"></div>
             <h3>Mariah Grade</h3>
             <p>Database Manager and Tester</p>
           </div>
           <div class="founder-card">
-            <div class="founder-image"><img class="logo" src="images/logo.png" alt="logo" width="200" height="150"></div>
+            <div class="founder-image"><img class="logo" src="static/images/logo.png" alt="logo" width="200" height="150"></div>
             <h3>Thomas Fletcher</h3>
             <p>Backend Developer</p>
           </div>

@@ -5,7 +5,8 @@
       "price": 0.30,
       "quantity": 150,
       "supplier": "Vegetable Gardens",
-      "expiration_date": "2024-12-15"
+      "expiration_date": "2024-12-15",
+      "image": "static/productimages/carrot.jpg"
     },
     {
       "name": "Broccoli",
@@ -13,7 +14,8 @@
       "price": 0.75,
       "quantity": 80,
       "supplier": "Green Farms",
-      "expiration_date": "2024-12-10"
+      "expiration_date": "2024-12-10",
+      "image": "static/productimages/broccoli.jpg"
     },
     {
       "name": "Spinach",
@@ -21,7 +23,8 @@
       "price": 1.20,
       "quantity": 100,
       "supplier": "Leafy Greens Co.",
-      "expiration_date": "2024-12-07"
+      "expiration_date": "2024-12-07",
+      "image": "static/productimages/spinach.jpg"
     },
     {
       "name": "Russet Potato",
@@ -29,7 +32,8 @@
       "price": 0.50,
       "quantity": 100,
       "supplier": "Root Veggie Supplies",
-      "expiration_date": "2024-12-20"
+      "expiration_date": "2024-12-20",
+      "image": "static/productimages/russet.jpg"
     },
     {
       "name": "Sweet Potato",
@@ -37,7 +41,8 @@
       "price": 0.60,
       "quantity": 100,
       "supplier": "Root Veggie Supplies",
-      "expiration_date": "2024-12-20"
+      "expiration_date": "2024-12-20",
+      "image": "static/productimages/sweet potato.jpg"
     },
     {
       "name": "Tomato",
@@ -45,7 +50,8 @@
       "price": 0.40,
       "quantity": 180,
       "supplier": "Sunny Farms",
-      "expiration_date": "2024-12-12"
+      "expiration_date": "2024-12-12",
+      "image": "static/productimages/tomato.jpg"
     },
     {
       "name": "Onion",
@@ -53,7 +59,8 @@
       "price": 0.20,
       "quantity": 200,
       "supplier": "Allium Growers",
-      "expiration_date": "2024-12-15"
+      "expiration_date": "2024-12-15",
+      "image": "static/productimages/onion.jpg"
     },
     {
       "name": "Bell Pepper",
@@ -61,7 +68,8 @@
       "price": 0.50,
       "quantity": 150,
       "supplier": "Pepper Patch",
-      "expiration_date": "2024-12-12"
+      "expiration_date": "2024-12-12",
+      "image": "static/productimages/bell pepper.jpg"
     },
     {
       "name": "Bok Choy",
@@ -69,7 +77,8 @@
       "price": 1.00,
       "quantity": 80,
       "supplier": "Leafy Greens Co.",
-      "expiration_date": "2024-12-07"
+      "expiration_date": "2024-12-07",
+      "image": "static/productimages/bok choy.jpg"
     },
     {
       "name": "Cabbage",
@@ -77,7 +86,8 @@
       "price": 0.75,
       "quantity": 90,
       "supplier": "Green Farms",
-      "expiration_date": "2024-12-10"
+      "expiration_date": "2024-12-10",
+      "image": "static/productimages/cabbage.jpg"
     },
     {
       "name": "Collard Greens",
@@ -85,7 +95,8 @@
       "price": 1.50,
       "quantity": 70,
       "supplier": "Leafy Greens Co.",
-      "expiration_date": "2024-12-07"
+      "expiration_date": "2024-12-07",
+      "image": "static/productimages/collard.jpg"
     },
     {
       "name": "Cucumber",
@@ -93,7 +104,8 @@
       "price": 0.30,
       "quantity": 180,
       "supplier": "Cool Cucumbers Ltd.",
-      "expiration_date": "2024-12-12"
+      "expiration_date": "2024-12-12",
+      "image": "static/productimages/cucumber.jpg"
     }
   ]
   

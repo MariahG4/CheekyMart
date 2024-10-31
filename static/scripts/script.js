@@ -1,40 +1,40 @@
 'use strict';
 const bakeryButton = document.querySelector('.bakery-btn');
 bakeryButton.addEventListener('click', () => {
-    fetchData('json/bakery.json');
+    fetchData('static/json/bakery.json');
 });
 
 const dairyButton = document.querySelector('.dairy-btn');
 dairyButton.addEventListener('click', () => {
-    fetchData('json/dairy.json');
+    fetchData('static/json/dairy.json');
 });
 
 const drinksButton = document.querySelector('.drinks-btn');
 drinksButton.addEventListener('click', () => {
-    fetchData('json/coffeetea.json');
+    fetchData('static/json/coffeetea.json');
 });
 
 const fruitsButton = document.querySelector('.fruits-btn');
 fruitsButton.addEventListener('click', () => {
-    fetchData('json/fruits.json');
+    fetchData('static/json/fruits.json');
 });
 
 const meatButton = document.querySelector('.meat-btn');
 meatButton.addEventListener('click', () => {
-    fetchData('json/meat.json');
+    fetchData('static/json/meat.json');
 });
 
 const nonButton = document.querySelector('.non-btn');
 nonButton.addEventListener('click', () => {
-    fetchData('json/nondairy_meatalt.json');
+    fetchData('static/json/nondairy_meatalt.json');
 });
 
 const vegetablesButton = document.querySelector('.vegetables-btn');
 vegetablesButton.addEventListener('click', () => {
-    fetchData('json/vegetables.json');
+    fetchData('static/json/vegetables.json');
 });
 
-async function fetchData (fileName) {
+async function fetchData(fileName) {
     try {
         const response = await fetch(fileName);
         if(!response.ok) {
@@ -46,6 +46,8 @@ async function fetchData (fileName) {
         console.log(error.message);
     }
 }
+
+let cart = [];
 
 function addProducts(products) {
     const container = document.querySelector('.products-container');
@@ -88,4 +90,9 @@ function addProducts(products) {
         productContent.appendChild(button);
         container.appendChild(article);
     });
+    /*
+    document.querySelectorAll("button").forEach(button => {
+        button.addEventListener("click", () => addToCart(button));
+    });
+    */
 }

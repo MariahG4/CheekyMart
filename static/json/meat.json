@@ -5,7 +5,8 @@
       "price": 5.00,
       "quantity": 100,
       "supplier": "Poultry Farms",
-      "expiration_date": "2024-11-25"
+      "expiration_date": "2024-11-25",
+      "image": "static/productimages/chicken breast.jpg"
     },
     {
       "name": "Ground Beef",
@@ -13,7 +14,8 @@
       "price": 6.50,
       "quantity": 80,
       "supplier": "Cattle Co.",
-      "expiration_date": "2024-11-30"
+      "expiration_date": "2024-11-30",
+      "image": "static/productimages/ground-beef-1024x682.jpg"
     },
     {
       "name": "Pork Chops",
@@ -21,7 +23,8 @@
       "price": 7.00,
       "quantity": 90,
       "supplier": "Piggy Ranch",
-      "expiration_date": "2024-11-28"
+      "expiration_date": "2024-11-28",
+      "image": "https://cdn.apartmenttherapy.info/image/fetch/f_auto,q_auto:eco,w_1460/https://storage.googleapis.com/gen-atmedia/3/2018/06/8f75b81de7b77fabcc94cea650e42eb4cb3ee5db.jpeg"
     },
     {
       "name": "Salmon Fillet",
@@ -29,7 +32,8 @@
       "price": 10.00,
       "quantity": 60,
       "supplier": "Ocean's Best",
-      "expiration_date": "2024-12-03"
+      "expiration_date": "2024-12-03",
+      "image": "static/productimages/Salmon.jpg"
     },
     {
       "name": "Turkey Breast",
@@ -37,7 +41,8 @@
       "price": 8.00,
       "quantity": 70,
       "supplier": "Turkey Farms",
-      "expiration_date": "2024-12-01"
+      "expiration_date": "2024-12-01",
+      "image": "static/productimages/turkey breast.jpg"
     },
     {
       "name": "Steak",
@@ -45,7 +50,8 @@
       "price": 12.00,
       "quantity": 50,
       "supplier": "Cattle Co.",
-      "expiration_date": "2024-11-30"
+      "expiration_date": "2024-11-30",
+      "image": "static/productimages/steak.jpg"
     },
     {
       "name": "Chicken Thighs",
@@ -53,7 +59,8 @@
       "price": 4.00,
       "quantity": 120,
       "supplier": "Poultry Farms",
-      "expiration_date": "2024-11-25"
+      "expiration_date": "2024-11-25",
+      "image": "static/productimages/chicken thighs.jpg"
     },
     {
       "name": "Ham",
@@ -61,7 +68,8 @@
       "price": 6.00,
       "quantity": 70,
       "supplier": "Piggy Ranch",
-      "expiration_date": "2024-11-28"
+      "expiration_date": "2024-11-28",
+      "image": "static/productimages/ham.jpg"
     },
     {
       "name": "Pork Sausage",
@@ -69,7 +77,8 @@
       "price": 5.50,
       "quantity": 80,
       "supplier": "Piggy Ranch",
-      "expiration_date": "2024-11-30"
+      "expiration_date": "2024-11-30",
+      "image": "static/productimages/pork sausage.jpg"
     },
     {
       "name": "Chicken Sausage",
@@ -77,7 +86,8 @@
       "price": 5.00,
       "quantity": 90,
       "supplier": "Poultry Farms",
-      "expiration_date": "2024-11-25"
+      "expiration_date": "2024-11-25",
+      "image": "static/productimages/chicken sausage.jpg"
     },
     {
       "name": "Beef Chuck Roast",
@@ -85,7 +95,8 @@
       "price": 9.00,
       "quantity": 60,
       "supplier": "Cattle Co.",
-      "expiration_date": "2024-11-30"
+      "expiration_date": "2024-11-30",
+      "image": "static/productimages/beefchuck.jpg"
     },
     {
       "name": "Shrimp",
@@ -93,7 +104,8 @@
       "price": 8.50,
       "quantity": 100,
       "supplier": "Ocean's Best",
-      "expiration_date": "2024-12-03"
+      "expiration_date": "2024-12-03",
+      "image": "static/productimages/shrimp.jpg"
     }
   ]
   

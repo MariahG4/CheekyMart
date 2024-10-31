@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CheekyMart</title>
+        <link rel="logo" type="image/x-icon" href="images/logo.jpg">
+        <link href="{{ url_for('static', filename='searchstyle.css') }}" rel="stylesheet">
+        <script src="{{ url_for('static', filename='scripts/script.js') }}" defer></script>
+    </head>
+
+    <header>
+        <div class="logo">
+            <img class="logo" src="static/images/logo.png" alt="logo" width="150" height="200">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="..">Home</a></li>
+                <li><a href="search">Search</a></li>
+                <li><a href="products">Products</a></li>
+                <li><a href="account">Account</a></li>
+                <li><a href="cart" class="cart-button">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <body>
+        <div class="container">
+          <h1>Departments</h1>
+          <p>Click on a department to view items.</p>
+          <div class="departments">
+            <a href="products"><button class="bakery-btn">Bakery</button></a>
+            <a href="products"><button class="dairy-btn">Dairy</button></a>
+          </div>
+          <div class="departments">
+            <a href="products"><button class="fruits-btn">Fruits</button></a>
+            <a href="products"><button class="vegetables-btn">Vegetables</button></a>
+            <a href="products"><button class="drinks-btn">Drinks/Coffee/Tea</button></a>
+          </div>
+          <div class="departments">
+            <a href="products"><button class="meat-btn">Meat</button></a>
+            <a href="products"><button class="non-btn">Non-Dairy/Meat Alternatives</button></a>
+          </div>
+        </div>
+      </body>
+</html>
