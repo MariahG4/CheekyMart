@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CheekyMart</title>
-        <link rel="logo" type="image/x-icon" href="static/images/logo.jpg">
-        <link href="{{ url_for('static', filename='homestyle.css') }}" rel="stylesheet">
-        <script src="{{ url_for('static', filename='scripts/script.js') }}" defer></script>
-    </head>
 
-    <header>
-        <div class="logo">
-            <img class="logo" src="static/images/logo.png" alt="logo" width="150" height="200">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="home">Home</a></li>
-                <li><a href="search">Search</a></li>
-                <li><a href="products">Products</a></li>
-                <li><a href="account">Account</a></li>
-                <li><a href="cart" class="cart-button">Cart</a></li>
-            </ul>
-        </nav>
-    </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheekyMart</title>
+    <link rel="logo" type="image/x-icon" href="static/images/logo.jpg">
+    <link href="{{ url_for('static', filename='homestyle.css') }}" rel="stylesheet">
+    <script src="{{ url_for('static', filename='scripts/script.js') }}" defer></script>
+</head>
+
+<header>
+    <div class="logo">
+        <img class="logo" src="static/images/logo.png" alt="logo" width="150" height="200">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="home">Home</a></li>
+            <li><a href="search">Search</a></li>
+            <li><a href="products">Products</a></li>
+            <li><a href="account">Account</a></li>
+            <li><a href="cart" class="cart-button">Cart</a></li>
+        </ul>
+    </nav>
+</header>
 
 
-    <body>
+<body>
+    <section class="account-container">
         <h1>Your Account</h1>
-        <div class="account-info">
-            <form action="/update" method="update">
+        <div class="profile-section">
+            <h2>Profile Information</h2>
+            <form action="/update" method="update" id="profile-form">
                 <div class="first-row">
                     <input type="text" name="firstname" placeholder="First Name">
                     <input type="text" name="lastname" placeholder="Last Name">
@@ -40,12 +43,16 @@
                     <button type="submit" class="update-prof">Update Profile</button>
                 </div>
             </form>
-            <div class="logout-btn">
-                <a href=".."><button class="log-out">Log Out</button></a>
-            </div>
-        </div>  
-        <div class="order-history">
-            <h1>Order History</h1>
         </div>
-    </body>
+        <div class="logout-btn">
+            <a href=".."><button class="log-out">Log Out</button></a>
+        </div>
+        <div class="order-history-section">
+            <div class="order-history">
+                <h1>Order History</h1>
+            </div>
+        </div>
+    </section>
+</body>
+
 </html>
