@@ -140,3 +140,58 @@ body h1 {
   padding: 20px;
   text-align: center;
 }
+
+.account-info {
+  padding: 50px 10px 50px 350px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.update-prof {
+  background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    min-width: 150px;
+}
+
+.update-prof:hover{
+  background-color: #e0e0e0;
+}
+
+input {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+}
+
+.first-row {
+  padding-bottom: 50px;
+}
+
+.update-btn {
+  padding-left: 350px;
+}
+
+.log-out {
+  color: red;
+  background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    min-width: 150px;
+}
+
+.log-out:hover{
+  background-color: #e0e0e0;
+}
+
+.logout-btn {
+  padding: 30px 0 0 350px;
+}

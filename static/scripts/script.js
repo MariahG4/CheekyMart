@@ -89,10 +89,25 @@ function addProducts(products) {
         productContent.appendChild(category);
         productContent.appendChild(button);
         container.appendChild(article);
+
+        /*
+        $(button).on('click', function() {
+            const productID = $(this).closest(productContent).data(title);
+            $ajax({
+                url: '/add_to_cart',
+                type: 'POST',
+                data: {
+                    product_id = productID
+                },
+                success: function(response) {
+                    updateCart(response.cart);
+                },
+                error: function() {
+                    alert('Error adding product to cart');
+                }
+            }
+            )
+        })
+        */
     });
-    /*
-    document.querySelectorAll("button").forEach(button => {
-        button.addEventListener("click", () => addToCart(button));
-    });
-    */
 }

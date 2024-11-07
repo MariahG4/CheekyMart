@@ -15,7 +15,7 @@
         </div>
         <nav>
             <ul>
-                <li><a href="..">Home</a></li>
+                <li><a href="home">Home</a></li>
                 <li><a href="search">Search</a></li>
                 <li><a href="products">Products</a></li>
                 <li><a href="account">Account</a></li>
@@ -28,13 +28,21 @@
     <body>
         <h1>Your Account</h1>
         <div class="account-info">
-            <form action="">
-                <input type="text" name="firstname" placeholder="First Name">
-                <input type="text" name="lastname" placeholder="Last Name">
-                <input type="email" name="email" placeholder="Email">
-                <input type="text" name="phonenumber" placeholder="Phone Number">
-                <button>Update Profile</button>
+            <form action="/update" method="update">
+                <div class="first-row">
+                    <input type="text" name="firstname" placeholder="First Name">
+                    <input type="text" name="lastname" placeholder="Last Name">
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="text" name="phonenumber" placeholder="Phone Number">
+                </div>
+                <p></p>
+                <div class="update-btn">
+                    <button type="submit" class="update-prof">Update Profile</button>
+                </div>
             </form>
+            <div class="logout-btn">
+                <a href=".."><button class="log-out">Log Out</button></a>
+            </div>
         </div>  
         <div class="order-history">
             <h1>Order History</h1>
