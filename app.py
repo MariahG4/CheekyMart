@@ -107,7 +107,7 @@ def register():
             'password': hashed_password
         })
 
-        return redirect(url_for('login'))  # Redirect to login page after registration
+        return redirect(url_for('login'))  # Redirect to login page after successful registration
 
     # If GET request, render the register.html page
     return render_template('register.html')
