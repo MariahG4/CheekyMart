@@ -8,7 +8,62 @@
     <link rel="logo" type="image/x-icon" href="static/images/logo.jpg">
     <link href="{{ url_for('static', filename='homestyle.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='cart.css') }}" rel="stylesheet">
-    <script src="{{ url_for('static', filename='scripts/script.js') }}" defer></script>
+    <script>
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        function displayCart() {
+            // Retrieve the cart from localStorage
+            /* You can uncomment the remove buttons to see the remove functionality, it updates the total but will not remove items one by one 
+            so it is still a work in progress.*/
+            const cartContainer = document.getElementById('cart-items');
+            const totalCont = document.querySelector('.total');
+            const clearButton = document.getElementById('clear');
+
+            if (cart.length === 0) {
+                cartContainer.innerHTML = "<p>Your cart is empty!</p>";
+                return;
+            }
+
+            cart.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.innerHTML = `<p>${item.name} $${item.price}</p>`;
+                //const removeButton = document.createElement('button');
+                //removeButton.textContent = "Remove Item";
+                cartContainer.appendChild(itemElement);
+                //cartContainer.appendChild(removeButton);
+                /*
+                removeButton.onclick = () => {
+                    removeFromCart(item.name);
+                    updateTotal();
+                    localStorage.removeItem(item);
+                }
+                */
+            });
+
+            cartContainer.appendChild(clearButton);
+            clearButton.onclick = () => {
+                cart.forEach(item => {
+                    cartContainer.remove(item);
+                });
+                cartContainer.innerHTML = `<p>Your cart is empty!</p>`;
+                totalCont.innerHTML = `<p>Subtotal: $0.00</p>`;
+                localStorage.clear();
+            }
+            updateTotal();
+        }
+
+        function updateTotal() {
+            const totalElement = document.getElementById("total");
+            const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+            totalElement.textContent = total.toFixed(2);
+        }
+        /*
+        function removeFromCart(itemName) {
+            cart = cart.filter(item => item.name !== itemName);
+            displayCart();
+        }
+            */
+        window.onload = displayCart;
+    </script>
 </head>
 
 <body>
@@ -28,7 +83,10 @@
     </header>
     <section class="cart-container">
         <h1>Order Summary</h1>
-        <div id="order-summary">
+        <div class="cart">
+            <ul id="cart-items"></ul>
+            <p class="total">Subtotal: $<span id="total">0.00</span></p>
+            <button id="clear">Clear Cart</button>
         </div>
 
         <section class="customer-info">

@@ -244,3 +244,30 @@ padding: 8px 0;
 border-bottom: 1px solid #ddd;
 color: #555;
 }
+
+.profile-section {
+    padding: 20px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profile-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-item label {
+    font-weight: bold;
+    min-width: 150px; /* Adjust width for alignment */
+}
+
+.profile-item p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}

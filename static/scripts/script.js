@@ -47,8 +47,6 @@ async function fetchData(fileName) {
     }
 }
 
-let cart = [];
-
 function addProducts(products) {
     const container = document.querySelector('.products-container');
     container.innerHTML = '';
@@ -81,6 +79,7 @@ function addProducts(products) {
         button.style.backgroundColor = "green";
         button.style.color = "white";
         button.style.borderRadius = "10px 10px 10px 10px";
+        
 
 
         article.appendChild(productContent);
@@ -89,25 +88,18 @@ function addProducts(products) {
         productContent.appendChild(category);
         productContent.appendChild(button);
         container.appendChild(article);
-
-        /*
-        $(button).on('click', function() {
-            const productID = $(this).closest(productContent).data(title);
-            $ajax({
-                url: '/add_to_cart',
-                type: 'POST',
-                data: {
-                    product_id = productID
-                },
-                success: function(response) {
-                    updateCart(response.cart);
-                },
-                error: function() {
-                    alert('Error adding product to cart');
-                }
-            }
-            )
-        })
-        */
+        button.onclick = () => addToCart(product.name, product.price);
     });
+}
+
+function addToCart(name, price) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const product = cart.find(product => product.name === name);
+    if (product) {
+        product.quantity++;
+    } else {
+        cart.push({name, price, quantity: 1});
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert(`${name} added to your cart!`);
 }
