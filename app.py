@@ -1,9 +1,12 @@
 from flask import Flask, render_template, url_for, request, session, request, jsonify, redirect
 from dotenv import load_dotenv
 from pymongo import MongoClient
-from flask_login import LoginManager, login_user, logout_user, login_required, UserMixin
+from flask_login import LoginManager, login_user, logout_user, login_required, UserMixin, current_user
 from authlib.integrations.flask_client import OAuth
 from werkzeug.security import generate_password_hash
+from werkzeug.security import check_password_hash
+from flask_login import current_user
+from bson.objectid import ObjectId
 import os
 
 load_dotenv()
@@ -28,9 +31,13 @@ class User(UserMixin):
 
 @login_manager.user_loader
 def load_user(user_id):
-    user_data = db.users.find_one({'_id': user_id})
-    if user_data:
-        return User(user_id)
+    try:
+        # Convert user_id to ObjectId before querying the database
+        user_data = db.users.find_one({'_id': ObjectId(user_id)})
+        if user_data:
+            return User(str(user_data['_id']))  # Ensure `id` is a string
+    except Exception as e:
+        print(f"Error loading user: {e}")
     return None
 
 
@@ -68,13 +75,23 @@ def index():
 
 
 # Login/Signup Page
-@app.route('/') #methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def login():
-    #if request.method == "POST":
-        # Process login from data
-    #    pass
-    #else:
-       return render_template('login.html')
+    if request.method == 'POST':
+        email = request.form['email']
+        password = request.form['password']
+
+        # Fetch user from database
+        user_data = db.users.find_one({'email': email})
+        if user_data and check_password_hash(user_data['password'], password):
+            # Log the user in
+            login_user(User(str(user_data['_id'])))  # Convert `_id` to string
+            return redirect(url_for('account'))  # Redirect to account page
+
+        return "Invalid email or password", 401
+
+    # If GET request, render the login page
+    return render_template('login.html')
 
 
 # Register User
@@ -128,8 +145,18 @@ def search():
     
 # Account Page
 @app.route('/account')
-def profile():
-    return render_template('account.html')
+@login_required
+def account():
+    # Fetch the current user's ID
+    user_id = current_user.id
+
+    # Query the database for user details
+    user_data = db.users.find_one({"_id": ObjectId(user_id)})
+    if not user_data:
+        return "User not found", 404
+
+    # Pass user information to the template
+    return render_template('account.html', user=user_data)
 
 
 # Shopping Cart Page

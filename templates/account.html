@@ -31,14 +31,28 @@
         <h1>Your Account</h1>
         <div class="profile-section">
             <h2>Profile Information</h2>
-            <form action="/update" method="update" id="profile-form">
-                <div class="first-row">
-                    <input type="text" name="firstname" placeholder="First Name">
-                    <input type="text" name="lastname" placeholder="Last Name">
-                    <input type="email" name="email" placeholder="Email">
-                    <input type="text" name="phonenumber" placeholder="Phone Number">
+            <form action="/update" method="POST" id="profile-form">
+                <div class="profile-info">
+                    <div class="profile-item">
+                        <label for="username">Username:</label>
+                        <p id="username">{{ user.username }}</p>
+                    </div>
+
+                    <div class="profile-item">
+                        <label for="firstname">First Name:</label>
+                        <p id="firstname">{{ user.first_name }}</p>
+                    </div>
+
+                    <div class="profile-item">
+                        <label for="lastname">Last Name:</label>
+                        <p id="lastname">{{ user.last_name }}</p>
+                    </div>
+
+                    <div class="profile-item">
+                        <label for="email">Email:</label>
+                        <p id="email">{{ user.email }}</p>
+                    </div>
                 </div>
-                <p></p>
                 <div class="update-btn">
                     <button type="submit" class="update-prof">Update Profile</button>
                 </div>
