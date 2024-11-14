@@ -1,0 +1,752 @@
+[
+    {
+        "name": "Sourdough Bread",
+        "category": "Bakery",
+        "price": 3.50,
+        "quantity": 40,
+        "supplier": "Artisan Bakers",
+        "expiration_date": "2024-11-30T00:00:00Z",
+        "image": "https://tse1.mm.bing.net/th?id=OIP.S0q6FCFcqEOZMcswAODJFgHaGP&pid=Api&P=0&h=220",
+        "is_available": true
+    },
+    {
+        "name": "Croissant",
+        "category": "Bakery",
+        "price": 2.00,
+        "quantity": 60,
+        "supplier": "French Pastries",
+        "expiration_date": "2024-11-29T00:00:00Z",
+        "image": "https://www.theflavorbender.com/wp-content/uploads/2020/05/French-Croissants-SM-2363.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Muffin",
+        "category": "Bakery",
+        "price": 1.50,
+        "quantity": 70,
+        "supplier": "Morning Delights",
+        "expiration_date": "2024-11-28T00:00:00Z",
+        "image": "https://tse2.mm.bing.net/th?id=OIP.7IALesM5gCfyV_VOvQdb5gHaHa&pid=Api&P=0&h=220",
+        "is_available": true
+    },
+    {
+        "name": "Bagel",
+        "category": "Bakery",
+        "price": 1.00,
+        "quantity": 80,
+        "supplier": "Bagel Bros",
+        "expiration_date": "2024-11-30T00:00:00Z",
+        "image": "https://sugarspunrun.com/wp-content/uploads/2020/02/homemade-bagels-recipe-1-of-1-2.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Danish Pastry",
+        "category": "Bakery",
+        "price": 2.50,
+        "quantity": 50,
+        "supplier": "Pastry Palace",
+        "expiration_date": "2024-11-27T00:00:00Z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Glazed_apple_Danish.jpg/1200px-Glazed_apple_Danish.jpg?20220823221922",
+        "is_available": true
+    },
+    {
+        "name": "Baguette",
+        "category": "Bakery",
+        "price": 2.00,
+        "quantity": 55,
+        "supplier": "French Bakers",
+        "expiration_date": "2024-11-26T00:00:00Z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Baguettes_-_stonesoup.jpg/640px-Baguettes_-_stonesoup.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Chocolate Cake",
+        "category": "Bakery",
+        "price": 15.00,
+        "quantity": 20,
+        "supplier": "Sweet Treats",
+        "expiration_date": "2024-12-01T00:00:00Z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Quinoa_Chocolate_Cake_CCBYSA2_Karen_Neo.jpg/640px-Quinoa_Chocolate_Cake_CCBYSA2_Karen_Neo.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Donut",
+        "category": "Bakery",
+        "price": 1.20,
+        "quantity": 90,
+        "supplier": "Donut Shop",
+        "expiration_date": "2024-11-25T00:00:00Z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Glazed-Donut.jpg/640px-Glazed-Donut.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Cinnamon Roll",
+        "category": "Bakery",
+        "price": 2.80,
+        "quantity": 65,
+        "supplier": "Bakery Bliss",
+        "expiration_date": "2024-11-27T00:00:00Z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Cinnamon_roll-Cinnabon.jpg/640px-Cinnamon_roll-Cinnabon.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Apple Pie",
+        "category": "Bakery",
+        "price": 12.00,
+        "quantity": 30,
+        "supplier": "Pie Makers",
+        "expiration_date": "2024-12-02T00:00:00Z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Apple_pie_24.jpg/640px-Apple_pie_24.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Espresso",
+        "category": "Coffee",
+        "price": 3.00,
+        "quantity": 40,
+        "supplier": "Coffee Roasters Ltd.",
+        "expiration_date": "2024-12-30T00:00:00Z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Espresso_BW_1.jpg/640px-Espresso_BW_1.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Latte",
+        "category": "Coffee",
+        "price": 4.00,
+        "quantity": 35,
+        "supplier": "Coffee Roasters Ltd.",
+        "expiration_date": "2024-12-30T00:00:00Z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Caff%C3%A8_latte_Michele%E2%80%99s_Caf%C3%A9_Cookham.jpg/640px-Caff%C3%A8_latte_Michele%E2%80%99s_Caf%C3%A9_Cookham.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Cappuccino",
+        "category": "Coffee",
+        "price": 4.50,
+        "quantity": 30,
+        "supplier": "Coffee Roasters Ltd.",
+        "expiration_date": "2024-12-30T00:00:00Z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/The_Mocha_Nut_-_November_2023_-_Sarah_Stierch_05.jpg/640px-The_Mocha_Nut_-_November_2023_-_Sarah_Stierch_05.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Cold Brew",
+        "category": "Coffee",
+        "price": 3.50,
+        "quantity": 50,
+        "supplier": "Cold Brew Co.",
+        "expiration_date": "2024-12-25T00:00:00Z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Iced_cold_brew_coffee.jpg/640px-Iced_cold_brew_coffee.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Black Tea",
+        "category": "Tea",
+        "price": 2.00,
+        "quantity": 60,
+        "supplier": "Tea Traders",
+        "expiration_date": "2024-12-20T00:00:00Z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Cup_of_black_tea.JPG/640px-Cup_of_black_tea.JPG",
+        "is_available": true
+    },
+    {
+        "name": "Green Tea",
+        "category": "Tea",
+        "price": 2.50,
+        "quantity": 55,
+        "supplier": "Tea Traders",
+        "expiration_date": "2024-12-20T00:00:00Z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Boseong_green_tea.jpg/640px-Boseong_green_tea.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Chamomile Tea",
+        "category": "Tea",
+        "price": 2.80,
+        "quantity": 50,
+        "supplier": "Herbal Teas Co.",
+        "expiration_date": "2024-12-18T00:00:00Z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Yuja_chamomile_tea.jpg/640px-Yuja_chamomile_tea.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Matcha Latte",
+        "category": "Tea",
+        "price": 5.00,
+        "quantity": 40,
+        "supplier": "Tea Traders",
+        "expiration_date": "2024-12-20T00:00:00Z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Matcha_tea_latte_with_rosetta_latte_art.jpg/640px-Matcha_tea_latte_with_rosetta_latte_art.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Chai Tea",
+        "category": "Tea",
+        "price": 3.00,
+        "quantity": 45,
+        "supplier": "Spice Blends",
+        "expiration_date": "2024-12-22T00:00:00Z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Chai_%28Tea%29_3.jpg/640px-Chai_%28Tea%29_3.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Earl Grey",
+        "category": "Tea",
+        "price": 2.70,
+        "quantity": 50,
+        "supplier": "Tea Traders",
+        "expiration_date": "2024-12-20T00:00:00Z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Mug_of_Earl_Grey_tea%2C_Cafe_Express%2C_York_Way%2C_London%2C_England_01.jpg/640px-Mug_of_Earl_Grey_tea%2C_Cafe_Express%2C_York_Way%2C_London%2C_England_01.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Whole Milk",
+        "category": "Dairy",
+        "price": 2.50,
+        "quantity": 50,
+        "supplier": "Dairy Farmers Co-op",
+        "expiration_date": "2024-11-30T00:00:00Z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Whole_milk_aisle_%2817132962560%29.jpg/640px-Whole_milk_aisle_%2817132962560%29.jpg",
+        "is_available": true
+    },
+    {
+        "name": "2% Milk",
+        "category": "Dairy",
+        "price": 2.30,
+        "quantity": 50,
+        "supplier": "Dairy Farmers Co-op",
+        "expiration_date": "2024-12-01T00:00:00Z",
+        "image": "https://images.freshop.com/00041900076610/ac4fec5776fd7fddc43c702dfc072c09_large.png",
+        "is_available": true
+    },
+    {
+        "name": "Skim Milk",
+        "category": "Dairy",
+        "price": 2.20,
+        "quantity": 50,
+        "supplier": "Dairy Farmers Co-op",
+        "expiration_date": "2024-12-01T00:00:00Z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Skimmed_milk.jpg/640px-Skimmed_milk.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Eggs",
+        "category": "Dairy",
+        "price": 2.50,
+        "quantity": 100,
+        "supplier": "Farm Fresh",
+        "expiration_date": "2024-12-10T00:00:00Z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/2020-05-05_19_27_12_An_open_carton_of_a_dozen_Large_Grade_A_Chicken_Eggs_from_Egg-land%27s_Best_in_the_Franklin_Farm_section_of_Oak_Hill%2C_Fairfax_County%2C_Virginia.jpg/640px-thumbnail.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Greek Yogurt",
+        "category": "Dairy",
+        "price": 3.00,
+        "quantity": 80,
+        "supplier": "Yogurt Bliss",
+        "expiration_date": "2024-12-05T00:00:00Z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Turkish_strained_yogurt.jpg/640px-Turkish_strained_yogurt.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Cheddar Cheese",
+        "category": "Dairy",
+        "price": 4.00,
+        "quantity": 60,
+        "supplier": "Cheese Masters",
+        "expiration_date": "2024-12-20T00:00:00Z",
+        "image": "https://thecheesewanker.com/wp-content/uploads/2021/12/Cheese-cheddar-e1639449389970-1536x1226.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Butter",
+        "category": "Dairy",
+        "price": 3.50,
+        "quantity": 70,
+        "supplier": "Creamery Co.",
+        "expiration_date": "2024-12-15T00:00:00Z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/NCI_butter.jpg/640px-NCI_butter.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Sour Cream",
+        "category": "Dairy",
+        "price": 2.00,
+        "quantity": 50,
+        "supplier": "Dairy Delight",
+        "expiration_date": "2024-12-08T00:00:00Z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Sour_cream.jpg/640px-Sour_cream.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Mozzarella Cheese",
+        "category": "Dairy",
+        "price": 4.50,
+        "quantity": 60,
+        "supplier": "Cheese Masters",
+        "expiration_date": "2024-12-20T00:00:00Z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Mozzarella_cheese.jpg/640px-Mozzarella_cheese.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Cottage Cheese",
+        "category": "Dairy",
+        "price": 3.20,
+        "quantity": 40,
+        "supplier": "Dairy Delight",
+        "expiration_date": "2024-12-10T00:00:00Z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Cottage_Cheese_homemade.jpg/640px-Cottage_Cheese_homemade.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Cream Cheese",
+        "category": "Dairy",
+        "price": 3.00,
+        "quantity": 50,
+        "supplier": "Creamery Co.",
+        "expiration_date": "2024-12-12T00:00:00Z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Philly_cream_cheese.jpg/640px-Philly_cream_cheese.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Whipped Cream",
+        "category": "Dairy",
+        "price": 2.80,
+        "quantity": 30,
+        "supplier": "Dairy Delight",
+        "expiration_date": "2024-12-09T00:00:00Z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Vegan_whipped_cream.jpg/640px-Vegan_whipped_cream.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Provolone Cheese",
+        "category": "Dairy",
+        "price": 4.20,
+        "quantity": 45,
+        "supplier": "Cheese Masters",
+        "expiration_date": "2024-12-18T00:00:00Z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Provolone_layered.jpg/640px-Provolone_layered.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Apple",
+        "category": "Fruits",
+        "price": 0.25,
+        "quantity": 200,
+        "supplier": "Orchard Inc.",
+        "expiration_date": "2024-12-10T00:00:00Z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Red_Apple.jpg/640px-Red_Apple.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Banana",
+        "category": "Fruits",
+        "price": 0.15,
+        "quantity": 300,
+        "supplier": "Tropical Traders",
+        "expiration_date": "2024-12-12T00:00:00Z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Bananas_on_black_background_02.jpg/640px-Bananas_on_black_background_02.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Orange",
+        "category": "Fruits",
+        "price": 0.35,
+        "quantity": 250,
+        "supplier": "Citrus Co.",
+        "expiration_date": "2024-12-15T00:00:00Z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Orange_--_2022_--_9715.jpg/640px-Orange_--_2022_--_9715.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Strawberry",
+        "category": "Fruits",
+        "price": 1.00,
+        "quantity": 150,
+        "supplier": "Berry Fields",
+        "expiration_date": "2024-12-05T00:00:00Z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Still_life_with_strawberries_in_a_crystal_bowl.jpg/640px-Still_life_with_strawberries_in_a_crystal_bowl.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Grape",
+        "category": "Fruits",
+        "price": 2.00,
+        "quantity": 100,
+        "supplier": "Vineyard Supplies",
+        "expiration_date": "2024-12-07T00:00:00Z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Pinot_Grigio-20201027-RM-114053.jpg/640px-Pinot_Grigio-20201027-RM-114053.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Pineapple",
+        "category": "Fruits",
+        "price": 1.50,
+        "quantity": 50,
+        "supplier": "Tropical Traders",
+        "expiration_date": "2024-12-20T00:00:00Z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/AnanasComosusOnPlant.jpg/640px-AnanasComosusOnPlant.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Mango",
+        "category": "Fruits",
+        "price": 1.75,
+        "quantity": 70,
+        "supplier": "Tropical Traders",
+        "expiration_date": "2024-12-18T00:00:00Z",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Mangos_-_single_and_halved.jpg/640px-Mangos_-_single_and_halved.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Chicken Breast",
+        "category": "Meat",
+        "price": 5.00,
+        "quantity": 100,
+        "supplier": "Poultry Farms",
+        "expiration_date": "2024-11-25T00:00:00Z",
+        "image": "static/productimages/chicken breast.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Ground Beef",
+        "category": "Meat",
+        "price": 6.50,
+        "quantity": 80,
+        "supplier": "Cattle Co.",
+        "expiration_date": "2024-11-30T00:00:00Z",
+        "image": "static/productimages/ground-beef-1024x682.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Pork Chops",
+        "category": "Meat",
+        "price": 7.00,
+        "quantity": 90,
+        "supplier": "Piggy Ranch",
+        "expiration_date": "2024-11-28T00:00:00Z",
+        "image": "https://cdn.apartmenttherapy.info/image/fetch/f_auto,q_auto:eco,w_1460/https://storage.googleapis.com/gen-atmedia/3/2018/06/8f75b81de7b77fabcc94cea650e42eb4cb3ee5db.jpeg",
+        "is_available": true
+    },
+    {
+        "name": "Salmon Fillet",
+        "category": "Seafood",
+        "price": 10.00,
+        "quantity": 60,
+        "supplier": "Ocean's Best",
+        "expiration_date": "2024-12-03T00:00:00Z",
+        "image": "static/productimages/Salmon.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Turkey Breast",
+        "category": "Meat",
+        "price": 8.00,
+        "quantity": 70,
+        "supplier": "Turkey Farms",
+        "expiration_date": "2024-12-01T00:00:00Z",
+        "image": "static/productimages/turkey breast.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Steak",
+        "category": "Meat",
+        "price": 12.00,
+        "quantity": 50,
+        "supplier": "Cattle Co.",
+        "expiration_date": "2024-11-30T00:00:00Z",
+        "image": "static/productimages/steak.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Chicken Thighs",
+        "category": "Meat",
+        "price": 4.00,
+        "quantity": 120,
+        "supplier": "Poultry Farms",
+        "expiration_date": "2024-11-25T00:00:00Z",
+        "image": "static/productimages/chicken thighs.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Ham",
+        "category": "Meat",
+        "price": 6.00,
+        "quantity": 70,
+        "supplier": "Piggy Ranch",
+        "expiration_date": "2024-11-28T00:00:00Z",
+        "image": "static/productimages/ham.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Pork Sausage",
+        "category": "Meat",
+        "price": 5.50,
+        "quantity": 80,
+        "supplier": "Piggy Ranch",
+        "expiration_date": "2024-11-30T00:00:00Z",
+        "image": "static/productimages/pork sausage.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Chicken Sausage",
+        "category": "Meat",
+        "price": 5.00,
+        "quantity": 90,
+        "supplier": "Poultry Farms",
+        "expiration_date": "2024-11-25T00:00:00Z",
+        "image": "static/productimages/chicken sausage.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Beef Chuck Roast",
+        "category": "Meat",
+        "price": 9.00,
+        "quantity": 60,
+        "supplier": "Cattle Co.",
+        "expiration_date": "2024-11-30T00:00:00Z",
+        "image": "static/productimages/beefchuck.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Shrimp",
+        "category": "Seafood",
+        "price": 8.50,
+        "quantity": 100,
+        "supplier": "Ocean's Best",
+        "expiration_date": "2024-12-03T00:00:00Z",
+        "image": "static/productimages/shrimp.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Almond Milk",
+        "category": "Non-Dairy",
+        "price": 3.00,
+        "quantity": 30,
+        "supplier": "Nutty Delights",
+        "expiration_date": "2024-12-10T00:00:00Z",
+        "image": "static/productimages/almond milk.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Oat Milk",
+        "category": "Non-Dairy",
+        "price": 2.80,
+        "quantity": 30,
+        "supplier": "Grain Goodness",
+        "expiration_date": "2024-12-10T00:00:00Z",
+        "image": "static/productimages/oat milk.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Soy Milk",
+        "category": "Non-Dairy",
+        "price": 2.90,
+        "quantity": 30,
+        "supplier": "Bean Brews",
+        "expiration_date": "2024-12-10T00:00:00Z",
+        "image": "static/productimages/soy milk.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Tofu",
+        "category": "Meat Alternatives",
+        "price": 2.50,
+        "quantity": 80,
+        "supplier": "Soy Goodness",
+        "expiration_date": "2024-12-15T00:00:00Z",
+        "image": "static/productimages/tofu.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Tempeh",
+        "category": "Meat Alternatives",
+        "price": 3.50,
+        "quantity": 60,
+        "supplier": "Fermented Foods",
+        "expiration_date": "2024-12-10T00:00:00Z",
+        "image": "static/productimages/tempeh.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Seitan",
+        "category": "Meat Alternatives",
+        "price": 4.00,
+        "quantity": 50,
+        "supplier": "Wheat Wonders",
+        "expiration_date": "2024-12-12T00:00:00Z",
+        "image": "static/productimages/seitan.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Beyond Burger",
+        "category": "Meat Alternatives",
+        "price": 6.00,
+        "quantity": 40,
+        "supplier": "Beyond Meat",
+        "expiration_date": "2024-12-20T00:00:00Z",
+        "image": "static/productimages/beyond.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Impossible Burger",
+        "category": "Meat Alternatives",
+        "price": 6.50,
+        "quantity": 45,
+        "supplier": "Impossible Foods",
+        "expiration_date": "2024-12-18T00:00:00Z",
+        "image": "https://tse2.mm.bing.net/th?id=OIP.Y5Ilvk-AEb9flxnawCwd-QHaFh&pid=Api&P=0&h=220",
+        "is_available": true
+    },
+    {
+        "name": "Soy Sausage",
+        "category": "Meat Alternatives",
+        "price": 4.50,
+        "quantity": 70,
+        "supplier": "Soy Goodness",
+        "expiration_date": "2024-12-13T00:00:00Z",
+        "image": "static/productimages/soy sausage.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Quorn Chicken",
+        "category": "Meat Alternatives",
+        "price": 5.00,
+        "quantity": 55,
+        "supplier": "Quorn Foods",
+        "expiration_date": "2024-12-17T00:00:00Z",
+        "image": "static/productimages/quorn chicken.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Jackfruit Pulled Pork",
+        "category": "Meat Alternatives",
+        "price": 4.20,
+        "quantity": 65,
+        "supplier": "Tropical Treats",
+        "expiration_date": "2024-12-14T00:00:00Z",
+        "image": "static/productimages/jackfruit pulled pork.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Carrot",
+        "category": "Vegetables",
+        "price": 0.30,
+        "quantity": 150,
+        "supplier": "Vegetable Gardens",
+        "expiration_date": "2024-12-15T00:00:00Z",
+        "image": "static/productimages/carrot.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Broccoli",
+        "category": "Vegetables",
+        "price": 0.75,
+        "quantity": 80,
+        "supplier": "Green Farms",
+        "expiration_date": "2024-12-10T00:00:00Z",
+        "image": "static/productimages/broccoli.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Spinach",
+        "category": "Vegetables",
+        "price": 1.20,
+        "quantity": 100,
+        "supplier": "Leafy Greens Co.",
+        "expiration_date": "2024-12-07T00:00:00Z",
+        "image": "static/productimages/spinach.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Russet Potato",
+        "category": "Vegetables",
+        "price": 0.50,
+        "quantity": 100,
+        "supplier": "Root Veggie Supplies",
+        "expiration_date": "2024-12-20T00:00:00Z",
+        "image": "static/productimages/russet.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Sweet Potato",
+        "category": "Vegetables",
+        "price": 0.60,
+        "quantity": 100,
+        "supplier": "Root Veggie Supplies",
+        "expiration_date": "2024-12-20T00:00:00Z",
+        "image": "static/productimages/sweet potato.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Tomato",
+        "category": "Vegetables",
+        "price": 0.40,
+        "quantity": 180,
+        "supplier": "Sunny Farms",
+        "expiration_date": "2024-12-12T00:00:00Z",
+        "image": "static/productimages/tomato.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Onion",
+        "category": "Vegetables",
+        "price": 0.20,
+        "quantity": 200,
+        "supplier": "Allium Growers",
+        "expiration_date": "2024-12-15T00:00:00Z",
+        "image": "static/productimages/onion.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Bell Pepper",
+        "category": "Vegetables",
+        "price": 0.50,
+        "quantity": 150,
+        "supplier": "Pepper Patch",
+        "expiration_date": "2024-12-12T00:00:00Z",
+        "image": "static/productimages/bell pepper.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Bok Choy",
+        "category": "Vegetables",
+        "price": 1.00,
+        "quantity": 80,
+        "supplier": "Leafy Greens Co.",
+        "expiration_date": "2024-12-07T00:00:00Z",
+        "image": "static/productimages/bok choy.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Cabbage",
+        "category": "Vegetables",
+        "price": 0.75,
+        "quantity": 90,
+        "supplier": "Green Farms",
+        "expiration_date": "2024-12-10T00:00:00Z",
+        "image": "static/productimages/cabbage.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Collard Greens",
+        "category": "Vegetables",
+        "price": 1.50,
+        "quantity": 70,
+        "supplier": "Leafy Greens Co.",
+        "expiration_date": "2024-12-07T00:00:00Z",
+        "image": "static/productimages/collard.jpg",
+        "is_available": true
+    },
+    {
+        "name": "Cucumber",
+        "category": "Vegetables",
+        "price": 0.30,
+        "quantity": 180,
+        "supplier": "Cool Cucumbers Ltd.",
+        "expiration_date": "2024-12-12T00:00:00Z",
+        "image": "static/productimages/cucumber.jpg",
+        "is_available": true
+    }
+]
