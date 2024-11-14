@@ -103,6 +103,7 @@ def register():
         first_name = request.form['first_name']
         last_name = request.form['last_name']
         email = request.form['email']
+        phone = request.form['phone']
         password = request.form['password']
 
         # Hash the password for security
@@ -121,6 +122,7 @@ def register():
             'first_name': first_name,
             'last_name': last_name,
             'email': email,
+            'phone': phone,
             'password': hashed_password
         })
 
@@ -161,8 +163,13 @@ def account():
 
 # Shopping Cart Page
 @app.route('/cart')
+@login_required
 def view_cart():
-    return render_template('cart.html')
+    user_id = current_user.id
+    user_data = db.users.find_one({"_id": ObjectId(user_id)})
+    if not user_data:
+        return "User not found", 404
+    return render_template('cart.html', user=user_data)
 
 
 # Products Page
