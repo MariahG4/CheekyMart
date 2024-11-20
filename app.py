@@ -132,8 +132,45 @@ def register():
 # Google login
 @app.route('/google-login')
 def google_login():
-    # Logic for Google login
-    return "Google Login Page"
+    redirect_uri = url_for('google_auth', _external=True)  # Redirect URI after successful login
+    print(f"Redirect URI: {redirect_uri}")
+    return google.authorize_redirect(redirect_uri)
+
+
+# Google Authentication
+@app.route('/google/auth')
+def google_auth():
+    try:
+        # Get user information from Google
+        token = google.authorize_access_token()
+        user_info = google.get('userinfo').json()
+
+        # Check if the user exists in the database
+        user = db.users.find_one({'email': user_info['email']})
+
+        if user:
+            # If user exists, log them in
+            login_user(User(str(user['_id'])))
+        else:
+            # If user does not exist, register them
+            new_user = {
+                'username': user_info.get('name', '').replace(' ', '_').lower(),
+                'first_name': user_info.get('given_name', ''),
+                'last_name': user_info.get('family_name', ''),
+                'email': user_info['email'],
+                'google_id': user_info['id'],  # Save the Google ID
+                'password': None,  # No password for Google-authenticated users
+            }
+            result = db.users.insert_one(new_user)
+            login_user(User(str(result.inserted_id)))
+
+        # Redirect to the account page
+        return redirect(url_for('account'))
+
+    except Exception as e:
+        print(f"Error during Google login: {e}")
+        flash('An error occurred during Google login. Please try again.', 'danger')
+        return redirect(url_for('login'))
 
 
 # Products Page
