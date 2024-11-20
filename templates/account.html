@@ -66,8 +66,11 @@
             </form>
         </div>
         <div class="logout-btn">
-            <a href=".."><button class="log-out">Log Out</button></a>
+            <a href="{{ url_for('logout') }}">
+                <button class="log-out">Log Out</button>
+            </a>
         </div>
+
         <div class="order-history-section">
             <div class="order-history">
                 <h1>Order History</h1>

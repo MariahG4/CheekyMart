@@ -274,5 +274,14 @@ def place_order():
 
     return redirect(url_for('view_cart'))
 
+
+# User logout
+@app.route('/logout')
+@login_required
+def logout():
+    logout_user()  # Logs the user out
+    return redirect(url_for('login'))  # Redirect to the login page
+
+
 if __name__ == '__main__':
     app.run(debug=True)
