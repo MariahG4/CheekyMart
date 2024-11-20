@@ -11,35 +11,69 @@
 </head>
 
 <body>
-  <header>
+  <header class="navbar">
     <div class="logo">
-      <img class="logo" src="static/images/logo.png" alt="logo" width="150" height="200">
+      <a href="home">
+        <img src="static/images/logo.png" alt="CheekyMart Logo">
+      </a>
     </div>
     <nav>
-      <ul>
-        <li><a href="home">Home</a></li>
-        <li><a href="search">Search</a></li>
-        <li><a href="products">Products</a></li>
-        <li><a href="account">Account</a></li>
-        <li><a href="cart" class="cart-button">Cart</a></li>
+      <ul class="nav-links">
+        <li><a href="home" class="nav-link active">Home</a></li>
+        <li><a href="search" class="nav-link">Search</a></li>
+        <li><a href="products" class="nav-link">Products</a></li>
+        <li><a href="account" class="nav-link">Account</a></li>
+        <li><a href="cart" class="nav-link cart-button">Cart</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="about-us">
-    <h1>Welcome to CheekyMart!</h1>
-    <div class="about-content">
-      <h2>About Us</h2>
+  <!-- Opening Section -->
+  <section class="online-shopping">
+    <div class="shopping-content">
+      <h1>ONLINE GROCERY STORE</h1>
+      <h2>Best App for Shopping</h2>
       <p>
-        CheekyMart is your one-stop app for fresh groceries and pantry staples, ready for convenient pickup!
-        CheekyMart makes grocery shopping easy and fast, allowing you to browse a wide range of products,
-        from farm-fresh produce to your favorite snacks. Forget about long lines — with just a few taps,
-        CheekyMart has everything ready for you to collect at your convenience. Your hunger, our cart,
-        ready when you are. So what are you waiting for?
-      </p>
-      <a href="search"><button>Browse Products</button></a>
+        Discover the easiest way to shop for groceries online with CheekyMart! From fresh produce to pantry staples, 
+        we bring the best of the market right to your fingertips. No more long lines or heavy bags, just 
+        convenient shopping from the comfort of your home. Join us and make your shopping experience delightful today!
+      </p>      
+      <a href="products"><button>Shop Now</button></a>
+    </div>
+    <div class="shopping-image">
+      <img src="static/images/online-grocery.jpeg" alt="Shopping Illustration">
     </div>
   </section>
+
+<!-- Subscribe to Our Newsletter -->
+<section class="subscribe-newsletter">
+  <h2>Subscribe to Our Newsletter</h2>
+  <p>Get exclusive deals, recipes, and updates delivered straight to your inbox!</p>
+  <form action="#" method="POST">
+    <input type="email" name="email" placeholder="Enter your email" required>
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
+
+<!-- Welcome Section -->
+<section class="welcome-section">
+  <div class="welcome-content">
+    <h1>Welcome to CheekyMart!</h1>
+    <h2>About Us</h2>
+    <p>
+      CheekyMart is your one-stop app for fresh groceries and pantry staples, ready for convenient pickup!
+      CheekyMart makes grocery shopping easy and fast, allowing you to browse a wide range of products,
+      from farm-fresh produce to your favorite snacks. Forget about long lines with just a few taps,
+      CheekyMart has everything ready for you to collect at your convenience. Your hunger, our cart,
+      ready when you are. So what are you waiting for?
+    </p>
+    <a href="search" class="browse-button">Browse Products</a>
+  </div>
+  <div class="welcome-image">
+    <img src="static/images/grocery.png" alt="CheekyMart">
+  </div>
+</section>
+
 
   <!-- Founders Section -->
   <section class="founders">

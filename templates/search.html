@@ -11,22 +11,31 @@
   <script src="{{ url_for('static', filename='scripts/script.js') }}" defer></script>
 </head>
 
-<header>
+<header class="navbar">
   <div class="logo">
-    <img class="logo" src="static/images/logo.png" alt="logo" width="150" height="200">
+    <a href="home">
+      <img src="static/images/logo.png" alt="CheekyMart Logo">
+    </a>
   </div>
   <nav>
-    <ul>
-      <li><a href="home">Home</a></li>
-      <li><a href="search">Search</a></li>
-      <li><a href="products">Products</a></li>
-      <li><a href="account">Account</a></li>
-      <li><a href="cart" class="cart-button">Cart</a></li>
+    <ul class="nav-links">
+      <li><a href="home" class="nav-link active">Home</a></li>
+      <li><a href="search" class="nav-link">Search</a></li>
+      <li><a href="products" class="nav-link">Products</a></li>
+      <li><a href="account" class="nav-link">Account</a></li>
+      <li><a href="cart" class="nav-link cart-button">Cart</a></li>
     </ul>
   </nav>
 </header>
 
 <body>
+
+  <div class="hero-section">
+    <h1>Find Everything You Need!</h1>
+    <p>Browse through our wide range of products and departments.</p>
+  </div>
+  
+  <!-- Search Bar -->
   <div class="search-container">
     <form action="{{ url_for('search') }}" method="POST">
       <input type="text" name="search" placeholder="Search products..." required>
@@ -34,23 +43,21 @@
     </form>
   </div>
 
+  <!-- Departments Section -->
   <div class="container">
     <h1>Departments</h1>
     <p>Click on a department to view items.</p>
     <div class="departments">
-      <a href="products"><button class="bakery-btn">Bakery</button></a>
-      <a href="products"><button class="dairy-btn">Dairy</button></a>
-    </div>
-    <div class="departments">
-      <a href="products"><button class="fruits-btn">Fruits</button></a>
-      <a href="products"><button class="vegetables-btn">Vegetables</button></a>
-      <a href="products"><button class="drinks-btn">Drinks/Coffee/Tea</button></a>
-    </div>
-    <div class="departments">
-      <a href="products"><button class="meat-btn">Meat</button></a>
-      <a href="products"><button class="non-btn">Non-Dairy/Meat Alternatives</button></a>
+      <a href="products"><button>Bakery</button></a>
+      <a href="products"><button>Dairy</button></a>
+      <a href="products"><button>Fruits</button></a>
+      <a href="products"><button>Vegetables</button></a>
+      <a href="products"><button>Drinks/Coffee/Tea</button></a>
+      <a href="products"><button>Meat</button></a>
+      <a href="products"><button>Non-Dairy/Meat Alternatives</button></a>
     </div>
   </div>
 </body>
+
 
 </html>
