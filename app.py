@@ -178,6 +178,8 @@ def google_auth():
 def search():
     return render_template('search.html')
 
+orders_collection = db['Orders']
+
 # Account Page
 @app.route('/account')
 @login_required
@@ -185,13 +187,17 @@ def account():
     # Fetch the current user's ID
     user_id = current_user.id
 
+    # finding order data based off user id
+    orderData = orders_collection.find({"user_id": ObjectId(user_id)})
+    orders = list(orderData)
+
     # Query the database for user details
     user_data = db.users.find_one({"_id": ObjectId(user_id)})
     if not user_data:
         return "User not found", 404
 
     # Pass user information to the template
-    return render_template('account.html', user=user_data)
+    return render_template('account.html', user=user_data, orders=orders)
 
 
 # Shopping Cart Page
@@ -230,8 +236,13 @@ def update_account():
     updated_data = {k: v for k, v in updated_data.items() if v}
 
     result = db.users.update_one({'_id': ObjectId(user_id)}, {'$set': updated_data})
-
+    
     return redirect(url_for('account'))
+
+def logged_in():
+    return session.get('user') is not None
+
+orderID = 0
 
 #place order
 @app.route('/place-order', methods=['POST'])

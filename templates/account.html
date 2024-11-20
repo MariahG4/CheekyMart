@@ -74,6 +74,22 @@
         <div class="order-history-section">
             <div class="order-history">
                 <h1>Order History</h1>
+                {% for order in orders %}
+                    <tr><strong><u>Order Details</u></strong></tr>
+                    {% for item in order['items'] %}
+                        <tr>
+                            {% set price = ((item['quantity'] | float) * (item['price'] | float)) %}
+                            <td>
+                                <p>{{ item['name'] }} x {{ item['quantity'] }} = ${{ price }} </p>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    <tr>
+                        <td>Status: {{ order['status'] }}</td>
+                        <br>
+                    </tr>
+                    <br>
+                {% endfor %}
             </div>
         </div>
     </section>

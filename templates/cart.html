@@ -104,17 +104,31 @@
         <section class="customer-info">
             <h2>Customer Information</h2>
             <form id="customer-form">
-                <label for="firstname">First Name</label>
-                <p id="firstname">{{ user.first_name }}</p>
+                {% if is_logged_in %}
+                    <label for="firstname">First Name</label>
+                    <p id="firstname">{{ user.first_name }}</p>
 
-                <label for="lastname">Last Name</label>
-                <p id="lastname">{{ user.last_name }}</p>
+                    <label for="lastname">Last Name</label>
+                    <p id="lastname">{{ user.last_name }}</p>
 
-                <label for="email">Email</label>
-                <p id="email">{{ user.email }}</p>
+                    <label for="email">Email</label>
+                    <p id="email">{{ user.email }}</p>
 
-                <label for="phone">Phone Number</label>
-                <p id="phone">{{ user.phone }}</p>
+                    <label for="phone">Phone Number</label>
+                    <p id="phone">{{ user.phone }}</p>
+                {% else %}
+                    <label for="firstname">First Name</label>
+                    <input type="text" name="first_name" id="first_name" required>
+
+                    <label for="lastname">Last Name</label>
+                    <input type="text" name="last_name" id="last_name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
+
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" name="phone" id="phone" required>
+                {% endif %}
             </form>
         </section>
 
