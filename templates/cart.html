@@ -108,20 +108,45 @@
 
         <section class="payment-info">
             <h2>Payment Information</h2>
-            <form id="payment-form">
+            <!-- Added input requirments to make sure its properly formatted, maybe go in later and find a way to -->
+            <form id="payment-form" method="POST" action="/place-order">
                 <label for="card-number">Card Number</label>
-                <input type="text" id="card-number" name="card-number">
-
+                <input type="text" id="card-number" name="card-number" pattern="\d{16}" placeholder="1234567812345678" required>
+                <small>Enter a 16-digit card number (numbers only)</small>
+            
                 <label for="security-code">Security Code</label>
-                <input type="text" id="security-code" name="security-code">
-
-                <label for="expiration-date">Expiration Date</label>
-                <input type="text" id="expiration-date" name="expiration-date">
-
-                <button type="button" onclick="">Place Order</button>
+                <input type="text" id="security-code" name="security-code" pattern="\d{3}" placeholder="123" required>
+                <small>Enter a 3-digit security code</small>
+            
+                <label for="expiration-date">Expiration Date (MM/YY)</label>
+                <input type="text" id="expiration-date" name="expiration-date" pattern="(0[1-9]|1[0-2])\/\d{2}" placeholder="MM/YY" required>
+                <small>Enter expiration in MM/YY format</small>
+            
+                <input type="hidden" id="cart-data" name="cart">
+                <button type="submit">Place Order</button>
             </form>
+            
         </section>
     </section>
 </body>
+<script>
+    document.getElementById('payment-form').onsubmit = function (event) {
+        // Prevent default form submission to add cart data
+        event.preventDefault();
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        //Is cart empty?
+        if (cart.length === 0) {
+            alert('Your cart is empty.');
+            return false;
+        }
+
+        // Populate Hidden input for cart data
+        document.getElementById('cart-data').value = JSON.stringify(cart);
+
+        console.log('What are you trying to submit?', cart);
+        this.submit();
+    };
+</script>
 
 </html>

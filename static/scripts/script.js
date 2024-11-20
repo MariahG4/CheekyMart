@@ -67,7 +67,7 @@ function addProducts(products) {
         title.textContent = product.name;
 
         const price = document.createElement('p');
-        price.textContent = "$" + product.price;
+        price.textContent = "$" + product.price.toFixed(2);
         price.style.textAlign = "center";
 
         const category = document.createElement('p');
@@ -103,3 +103,30 @@ function addToCart(name, price) {
     localStorage.setItem('cart', JSON.stringify(cart));
     alert(`${name} added to your cart!`);
 }
+
+
+document.getElementById('payment-form').onsubmit = function(event) {
+    //no default
+    event.preventDefault();
+
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    console.log('Cart data before submission:', cart);
+
+
+    if (cart.length === 0) {
+        alert('Your cart is empty.');
+        return false;
+    }
+
+
+    document.getElementById('cart-data').value = JSON.stringify(cart);
+    console.log('Hidden input set with cart data:', document.getElementById('cart-data').value);
+
+
+    this.submit();
+};
+
+
+
+

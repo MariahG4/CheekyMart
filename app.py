@@ -1,13 +1,12 @@
-from flask import Flask, render_template, url_for, request, session, request, jsonify, redirect
+from flask import Flask, render_template, url_for, request, session, request, jsonify, redirect, flash
 from dotenv import load_dotenv
 from pymongo import MongoClient
 from flask_login import LoginManager, login_user, logout_user, login_required, UserMixin, current_user
 from authlib.integrations.flask_client import OAuth
-from werkzeug.security import generate_password_hash
-from werkzeug.security import check_password_hash
-from flask_login import current_user
+from werkzeug.security import generate_password_hash, check_password_hash
 from bson.objectid import ObjectId
 import os
+import json
 
 load_dotenv()
 
@@ -41,13 +40,13 @@ def load_user(user_id):
     return None
 
 
-# Initialize OAUth and configure app
+# Initialize OAuth and configure app
 oauth = OAuth(app)
 
 google = oauth.register(
     name='google',
-    client_id=os.getenv('GOOGLE_CLIENT_ID'),
-    client_secret=os.getenv('GOOGLE_CLIENT_SECRET'),
+    client_id=google_client_id,
+    client_secret=google_client_secret,
     access_token_url='https://accounts.google.com/o/oauth2/token',
     authorize_url='https://accounts.google.com/o/oauth2/auth',
     api_base_url='https://www.googleapis.com/oauth2/v1/',
@@ -60,10 +59,8 @@ google = oauth.register(
 # MongoDB setup
 try:
     client = MongoClient(mongo_uri)
-    db = client.get_database()
-
-    # Test connection
-    print("Connected to MongoDB! Databases:", client.list_database_names())
+    db = client.get_database('CheekyMart')
+    print("Connected to MongoDB! Collections:", db.list_collection_names())
 except Exception as e:
     print("Error connecting to MongoDB:", e)
 
@@ -85,8 +82,8 @@ def login():
         user_data = db.users.find_one({'email': email})
         if user_data and check_password_hash(user_data['password'], password):
             # Log the user in
-            login_user(User(str(user_data['_id'])))  # Convert `_id` to string
-            return redirect(url_for('account'))  # Redirect to account page
+            login_user(User(str(user_data['_id'])))
+            return redirect(url_for('account'))
 
         return "Invalid email or password", 401
 
@@ -144,7 +141,6 @@ def google_login():
 def search():
     return render_template('search.html')
 
-    
 # Account Page
 @app.route('/account')
 @login_required
@@ -177,7 +173,7 @@ def view_cart():
 def products():
     return render_template('products.html')
 
-#Account update
+# Account update
 @app.route('/update', methods=['POST'])
 @login_required
 def update_account():
@@ -200,12 +196,62 @@ def update_account():
 
     return redirect(url_for('account'))
 
+#place order
+@app.route('/place-order', methods=['POST'])
+@login_required
+def place_order():
+    user_id = current_user.id
+    cart = request.form.get('cart')
 
-# Functions
-#@app.route('/cart/add', methods=['POST'])
-#def add_to_cart():
-    #cart = ShoppingCart.add(product=request.form['product'], quantity=int(request.form['quantity']))
-    #return jsonify(cart)
+    card_number = request.form.get('card-number')
+    security_code = request.form.get('security-code')
+    expiration_date = request.form.get('expiration-date')
+
+    # Debugging: Check if form data is received
+    print("Received form data:")
+    print("Card Number:", card_number)
+    print("Security Code:", security_code)
+    print("Expiration Date:", expiration_date)
+    print("Cart:", cart)
+
+    if not (card_number and security_code and expiration_date):
+        flash('Please fill in all payment fields.', 'warning')
+        print("Payment fields validation failed.")
+        return redirect(url_for('view_cart'))
+
+    if not cart:
+        flash('Your cart is empty.', 'warning')
+        print("Cart validation failed.")
+        return redirect(url_for('view_cart'))
+
+    try:
+        cart_data = json.loads(cart)
+        print("Parsed cart data:", cart_data)
+    except (TypeError, ValueError) as e:
+        flash('Invalid cart data.', 'danger')
+        print("Error parsing cart data:", e)
+        return redirect(url_for('view_cart'))
+
+    order = {
+        'user_id': ObjectId(user_id),
+        'items': cart_data,
+        'card_number': card_number,
+        'security_code': security_code,
+        'expiration_date': expiration_date,
+        'status': 'Pending'
+    }
+
+    try:
+        db.Orders.insert_one(order)
+        print("Order inserted successfully:", order)
+        flash('Order placed successfully!', 'success')
+    except Exception as e:
+        flash('Error placing order. Please try again.', 'danger')
+        print(f"Error inserting order into MongoDB: {e}")
+
+    return redirect(url_for('view_cart'))
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
