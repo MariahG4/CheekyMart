@@ -162,13 +162,38 @@ def account():
 # Shopping Cart Page
 @app.route('/cart')
 def view_cart():
-    return render_template('cart.html')
+    return render_template('cart.html', is_logged_in=logged_in())
 
 
 # Products Page
 @app.route('/products')
 def products():
     return render_template('products.html')
+
+@app.route('/update', methods=['POST'])
+@login_required
+def update_account():
+    user_id = current_user.id
+
+    updated_data = {
+        'username': request.form.get('username'),
+        'first_name': request.form.get('first_name'),
+        'last_name': request.form.get('last_name'),
+        'email': request.form.get('email'),
+        'phone': request.form.get('phone')
+    }
+
+    if updated_data['phone']:
+        updated_data['phone'] = ''.join(filter(str.isdigit, updated_data['phone']))
+
+    updated_data = {k: v for k, v in updated_data.items() if v}
+
+    result = db.users.update_one({'_id': ObjectId(user_id)}, {'$set': updated_data})
+    
+    return redirect(url_for('account'))
+
+def logged_in():
+    return session.get('user') is not None
 
 # Functions
 #@app.route('/cart/add', methods=['POST'])
