@@ -203,25 +203,19 @@ def place_order():
     user_id = current_user.id
     cart = request.form.get('cart')
 
-    card_number = request.form.get('card-number')
-    security_code = request.form.get('security-code')
-    expiration_date = request.form.get('expiration-date')
-
     # Debugging: Check if form data is received
     print("Received form data:")
-    print("Card Number:", card_number)
-    print("Security Code:", security_code)
-    print("Expiration Date:", expiration_date)
+    print("Card Number:", request.form.get('card-number'))
+    print("Security Code:", request.form.get('security-code'))
+    print("Expiration Date:", request.form.get('expiration-date'))
     print("Cart:", cart)
 
-    if not (card_number and security_code and expiration_date):
+    if not (request.form.get('card-number') and request.form.get('security-code') and request.form.get('expiration-date')):
         flash('Please fill in all payment fields.', 'warning')
-        print("Payment fields validation failed.")
         return redirect(url_for('view_cart'))
 
     if not cart:
         flash('Your cart is empty.', 'warning')
-        print("Cart validation failed.")
         return redirect(url_for('view_cart'))
 
     try:
@@ -229,28 +223,45 @@ def place_order():
         print("Parsed cart data:", cart_data)
     except (TypeError, ValueError) as e:
         flash('Invalid cart data.', 'danger')
-        print("Error parsing cart data:", e)
         return redirect(url_for('view_cart'))
+
+    # check to make sure the amount in cart isnt greater than amount in stock 
+    insufficient_stock_items = []
+    for item in cart_data:
+        product = db.Products.find_one({'name': item['name']})
+        if product:
+            if product['quantity'] < item['quantity']:
+                insufficient_stock_items.append(item['name'])
+    # if the user has items in the cart that would put the stock, alert them and say what is the issue and please remove it 
+    if insufficient_stock_items:
+        alert_message = f"The following items are out of stock or have insufficient stock: {', '.join(insufficient_stock_items)}. Please remove them from your cart to continue."
+        print("Insufficient stock for items:", insufficient_stock_items)
+        return f"<script>alert('{alert_message}'); window.location.href = '{url_for('view_cart')}';</script>"
 
     order = {
         'user_id': ObjectId(user_id),
         'items': cart_data,
-        'card_number': card_number,
-        'security_code': security_code,
-        'expiration_date': expiration_date,
         'status': 'Pending'
     }
 
     try:
         db.Orders.insert_one(order)
-        print("Order inserted successfully:", order)
         flash('Order placed successfully!', 'success')
+        print("Order inserted successfully:", order)
+
+        # update stock
+        for item in cart_data:
+            db.Products.update_one(
+                {'name': item['name']},
+                {'$inc': {'quantity': -item['quantity']}}
+            )
+            print(f"Updated {item['name']} stock.")
+
     except Exception as e:
         flash('Error placing order. Please try again.', 'danger')
-        print(f"Error inserting order into MongoDB: {e}")
+        print(f"Error inserting order or updating stock in MongoDB: {e}")
 
     return redirect(url_for('view_cart'))
-
 
 
 if __name__ == '__main__':
