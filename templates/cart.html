@@ -11,58 +11,70 @@
     <script>
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
         function displayCart() {
-            // Retrieve the cart from localStorage
-            /* You can uncomment the remove buttons to see the remove functionality, it updates the total but will not remove items one by one 
-            so it is still a work in progress.*/
             const cartContainer = document.getElementById('cart-items');
-            const totalCont = document.querySelector('.total');
-            const clearButton = document.getElementById('clear');
+            cartContainer.innerHTML = '';
+
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
             if (cart.length === 0) {
                 cartContainer.innerHTML = "<p>Your cart is empty!</p>";
+                updateTotal();
                 return;
             }
 
-            cart.forEach(item => {
+            cart.forEach((item, index) => {
                 const itemElement = document.createElement('div');
-                itemElement.innerHTML = `<p>${item.name} $${item.price}</p>`;
-                //const removeButton = document.createElement('button');
-                //removeButton.textContent = "Remove Item";
+                const totalPrice = (item.price * item.quantity).toFixed(2);
+                itemElement.innerHTML = `<p>${item.quantity}x ${item.name}: $${totalPrice}</p>`;
+
+                const removeButton = document.createElement('button');
+                removeButton.textContent = "Remove";
+                removeButton.style.marginLeft = "10px";
+                removeButton.classList.add('remove-btn');
+                removeButton.onclick = () => removeFromCart(index);
+
+                itemElement.appendChild(removeButton);
                 cartContainer.appendChild(itemElement);
-                //cartContainer.appendChild(removeButton);
-                /*
-                removeButton.onclick = () => {
-                    removeFromCart(item.name);
-                    updateTotal();
-                    localStorage.removeItem(item);
-                }
-                */
             });
 
-            cartContainer.appendChild(clearButton);
-            clearButton.onclick = () => {
-                cart.forEach(item => {
-                    cartContainer.remove(item);
-                });
-                cartContainer.innerHTML = `<p>Your cart is empty!</p>`;
-                totalCont.innerHTML = `<p>Subtotal: $0.00</p>`;
-                localStorage.clear();
-            }
             updateTotal();
         }
 
-        function updateTotal() {
-            const totalElement = document.getElementById("total");
-            const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-            totalElement.textContent = total.toFixed(2);
-        }
-        /*
-        function removeFromCart(itemName) {
-            cart = cart.filter(item => item.name !== itemName);
+        function clearCart() {
+            localStorage.removeItem('cart');
             displayCart();
+            updateTotal();
+            alert('Cart has been cleared!');
         }
-            */
-        window.onload = displayCart;
+
+        function removeFromCart(index) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            if (index >= 0 && index < cart.length) {
+                if (cart[index].quantity > 1) {
+                    cart[index].quantity--;
+                } else {
+                    cart.splice(index, 1);
+                }
+
+                localStorage.setItem('cart', JSON.stringify(cart));
+
+                displayCart();
+                updateTotal();
+                alert('Item removed from the cart');
+            }
+        }
+
+        function updateTotal() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+            document.getElementById("total").textContent = total.toFixed(2);
+        }
+
+        window.onload = function () {
+            displayCart();
+            document.getElementById('clear').onclick = clearCart;
+        };
     </script>
 </head>
 
@@ -111,21 +123,23 @@
             <!-- Added input requirments to make sure its properly formatted, maybe go in later and find a way to -->
             <form id="payment-form" method="POST" action="/place-order">
                 <label for="card-number">Card Number</label>
-                <input type="text" id="card-number" name="card-number" pattern="\d{16}" placeholder="1234567812345678" required>
+                <input type="text" id="card-number" name="card-number" pattern="\d{16}" placeholder="1234567812345678"
+                    required>
                 <small>Enter a 16-digit card number (numbers only)</small>
-            
+
                 <label for="security-code">Security Code</label>
                 <input type="text" id="security-code" name="security-code" pattern="\d{3}" placeholder="123" required>
                 <small>Enter a 3-digit security code</small>
-            
+
                 <label for="expiration-date">Expiration Date (MM/YY)</label>
-                <input type="text" id="expiration-date" name="expiration-date" pattern="(0[1-9]|1[0-2])\/\d{2}" placeholder="MM/YY" required>
+                <input type="text" id="expiration-date" name="expiration-date" pattern="(0[1-9]|1[0-2])\/\d{2}"
+                    placeholder="MM/YY" required>
                 <small>Enter expiration in MM/YY format</small>
-            
+
                 <input type="hidden" id="cart-data" name="cart">
                 <button type="submit">Place Order</button>
             </form>
-            
+
         </section>
     </section>
 </body>
