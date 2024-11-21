@@ -160,6 +160,8 @@
 
         console.log('What are you trying to submit?', cart);
         this.submit();
+        alert('Order placed.');
+        localStorage.removeItem('cart');
     };
 </script>
 
