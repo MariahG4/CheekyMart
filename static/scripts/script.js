@@ -1,4 +1,5 @@
 'use strict';
+
 const bakeryButton = document.querySelector('.bakery-btn');
 bakeryButton.addEventListener('click', () => {
     fetchData('static/json/bakery.json');
@@ -33,6 +34,12 @@ const vegetablesButton = document.querySelector('.vegetables-btn');
 vegetablesButton.addEventListener('click', () => {
     fetchData('static/json/vegetables.json');
 });
+/*
+const searchButton = document.getElementById('search-button');
+searchButton.addEventListener('click', () => {
+    fetchData2('static/json/Products.json');
+});
+*/
 
 async function fetchData(fileName) {
     try {
@@ -46,7 +53,20 @@ async function fetchData(fileName) {
         console.log(error.message);
     }
 }
-
+/*
+async function fetchData2(fileName) {
+    try {
+        const response = await fetch(fileName);
+        if(!response.ok) {
+            throw Error(`Error: ${response.url} ${response.statusText}`)
+        }
+        const data = await response.json();
+        searchProduct(data);
+    } catch (error) {
+        console.log(error.message);
+    }
+}
+*/
 document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
     const category = urlParams.get('category');
@@ -156,5 +176,46 @@ document.getElementById('payment-form').onsubmit = function(event) {
     this.submit();
 };
 
+function displayProducts(filteredProducts) {
+    const productList = document.getElementById('product-list');
+    productList.innerHTML = ''; // Clear current list
+    
+    // If no products match, show a message
+    if (filteredProducts.length === 0) {
+        productList.innerHTML = '<p>No products found.</p>';
+        return;
+    }
+    
+    // Create a product element for each item in the filtered list
+    filteredProducts.forEach(product => {
+        const productDiv = document.createElement('div');
+        productDiv.classList.add('product');
+        productDiv.textContent = product.name + " $" + product.price + " ";
+        const button = document.createElement('button');
+        button.textContent = "Add to cart";
+        button.style.backgroundColor = "green";
+        button.style.color = "white";
+        button.style.borderRadius = "10px 10px 10px 10px";
+        button.style.padding = "3px 3px 3px 3px"
+        productDiv.appendChild(button);
+        productList.appendChild(productDiv);
+        button.onclick = () => addToCart(product.name, product.price);
+    });
+}
 
+// Function to search for a product (triggered by button click)
+function searchProduct(products) {
+    const query = document.getElementById('search-bar').value.toLowerCase();
+    
+    // Filter products based on the search query
+    const filteredProducts = products.filter(product => 
+        product.name.toLowerCase().includes(query)
+    );
+    
+    // Display the filtered products
+    displayProducts(filteredProducts);
+}
+
+// Initial display of all products
+displayProducts(products);
 

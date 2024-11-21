@@ -9,6 +9,16 @@
   <link href="{{ url_for('static', filename='searchstyle.css') }}" rel="stylesheet">
   <link href="{{ url_for('static', filename='homestyle.css') }}" rel="stylesheet">
   <script src="{{ url_for('static', filename='scripts/script.js') }}" defer></script>
+  <style>
+    #product-list {
+        margin-top: 20px;
+    }
+    .product {
+        padding: 10px;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+  </style>
 </head>
 
 <header class="navbar">
@@ -37,10 +47,11 @@
   
   <!-- Search Bar -->
   <div class="search-container">
-    <form action="{{ url_for('search') }}" method="POST">
-      <input type="text" name="search" placeholder="Search products..." required>
-      <button type="submit">Search</button>
-    </form>
+      <input type="text" id="search-bar" name="search-bar" placeholder="Search products..." required>
+      <button id="search-button" type="submit">Search</button>
+  </div>
+  <div id="product-list">
+    <!-- Products will be listed here -->
   </div>
 
   <!-- Departments Section -->
@@ -59,5 +70,24 @@
   </div>
 </body>
 
+<script>
+  const searchButton = document.getElementById('search-button');
+  searchButton.addEventListener('click', () => {
+      fetchData2('static/json/Products.json');
+  });
+
+  async function fetchData2(fileName) {
+    try {
+        const response = await fetch(fileName);
+        if(!response.ok) {
+            throw Error(`Error: ${response.url} ${response.statusText}`)
+        }
+        const data = await response.json();
+        searchProduct(data);
+    } catch (error) {
+        console.log(error.message);
+    }
+}
+</script>
 
 </html>
