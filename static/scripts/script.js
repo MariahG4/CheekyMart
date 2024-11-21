@@ -47,6 +47,35 @@ async function fetchData(fileName) {
     }
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const category = urlParams.get('category');
+
+    if (category) {
+        loadProductsByCategory(category); // Automatically load products for the selected category
+    }
+});
+
+// Function to load products based on category
+function loadProductsByCategory(category) {
+    const categoryToFileMap = {
+        'Bakery': 'static/json/bakery.json',
+        'Dairy': 'static/json/dairy.json',
+        'Fruits': 'static/json/fruits.json',
+        'Vegetables': 'static/json/vegetables.json',
+        'Drinks': 'static/json/coffeetea.json',
+        'Meat': 'static/json/meat.json',
+        'Non-Dairy': 'static/json/nondairy_meatalt.json',
+    };
+
+    const fileName = categoryToFileMap[category];
+    if (fileName) {
+        fetchData(fileName);
+    } else {
+        console.error('Invalid category:', category);
+    }
+}
+
 function addProducts(products) {
     const container = document.querySelector('.products-container');
     container.innerHTML = '';

@@ -10,34 +10,39 @@
         <script src="{{ url_for('static', filename='scripts/script.js') }}" defer></script>
     </head>
 
-    <header>
+    <header class="navbar">
         <div class="logo">
-            <img class="logo" src="static/images/logo.png" alt="logo" width="150" height="200">
+          <a href="home">
+            <img src="static/images/logo.png" alt="CheekyMart Logo">
+          </a>
         </div>
         <nav>
-            <ul>
-                <li><a href="home">Home</a></li>
-                <li><a href="search">Search</a></li>
-                <li><a href="products">Products</a></li>
-                <li><a href="account">Account</a></li>
-                <li><a href="cart" class="cart-button">Cart</a></li>
-            </ul>
+          <ul class="nav-links">
+            <li><a href="home" class="nav-link active">Home</a></li>
+            <li><a href="search" class="nav-link">Search</a></li>
+            <li><a href="products" class="nav-link">Products</a></li>
+            <li><a href="account" class="nav-link">Account</a></li>
+            <li><a href="cart" class="nav-link cart-button">Cart</a></li>
+          </ul>
         </nav>
-    </header>
+      </header>
 
-    <main>
-        <div class="filter">
-            <h1>Filter by Category</h1>
-            <div class="buttons">
-                <button class="bakery-btn">Bakery</button>
-                <button class="dairy-btn">Dairy</button>
-                <button class="fruits-btn">Fruits</button>
-                <button class="vegetables-btn">Vegetables</button>
-                <button class="drinks-btn">Drinks/Coffee/Tea</button>
-                <button class="meat-btn">Meat</button>
-                <button class="non-btn">Non-Dairy/Meat Alternatives</button>
-            </div>
-        </div>
-        <div class="products-container"></div>
-    </main>
+    <main class="products-main">
+        <aside class="filter-pane">
+          <h2>Filter by Category</h2>
+          <ul>
+            <li><button class="bakery-btn">Bakery</button></li>
+            <li><button class="dairy-btn">Dairy</button></li>
+            <li><button class="fruits-btn">Fruits</button></li>
+            <li><button class="vegetables-btn">Vegetables</button></li>
+            <li><button class="drinks-btn">Drinks/Coffee/Tea</button></li>
+            <li><button class="meat-btn">Meat</button></li>
+            <li><button class="non-btn">Non-Dairy/Meat Alternatives</button></li>
+          </ul>
+        </aside>
+      
+        <section class="product-section">
+          <div class="products-container"></div>
+        </section>
+      </main>
 </html>
