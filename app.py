@@ -242,8 +242,6 @@ def update_account():
 def logged_in():
     return session.get('user') is not None
 
-orderID = 0
-
 #place order
 @app.route('/place-order', methods=['POST'])
 @login_required
