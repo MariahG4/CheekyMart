@@ -5,8 +5,10 @@ from flask_login import LoginManager, login_user, logout_user, login_required, U
 from authlib.integrations.flask_client import OAuth
 from werkzeug.security import generate_password_hash, check_password_hash
 from bson.objectid import ObjectId
+from cryptography.fernet import Fernet
 import os
 import json
+
 
 load_dotenv()
 
@@ -20,6 +22,10 @@ mongo_uri = os.getenv('MONGO_URI')
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
+
+# Encryption Key for CC security
+encryption_key = os.getenv('ENCRYPTION_KEY')
+cipher = Fernet(encryption_key)
 
 
 # User model for Flask-Login
@@ -266,16 +272,23 @@ def place_order():
 
     try:
         cart_data = json.loads(cart)
+        updated_cart_data = []
         print("Parsed cart data:", cart_data)
     except (TypeError, ValueError) as e:
         flash('Invalid cart data.', 'danger')
         return redirect(url_for('view_cart'))
+
+    # Encrypt the credit card number
+    card_number = request.form.get('card-number')
+    encrypted_card_number = cipher.encrypt(card_number.encode())
 
     # check to make sure the amount in cart isnt greater than amount in stock 
     insufficient_stock_items = []
     for item in cart_data:
         product = db.Products.find_one({'name': item['name']})
         if product:
+            item['image'] = product.get('image', '')
+            updated_cart_data.append(item)
             if product['quantity'] < item['quantity']:
                 insufficient_stock_items.append(item['name'])
     # if the user has items in the cart that would put the stock, alert them and say what is the issue and please remove it 
@@ -286,8 +299,9 @@ def place_order():
 
     order = {
         'user_id': ObjectId(user_id),
-        'items': cart_data,
-        'status': 'Pending'
+        'items': updated_cart_data,
+        'card_number': encrypted_card_number,
+        'status': 'Complete'
     }
 
     try:
