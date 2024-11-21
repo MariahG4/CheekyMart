@@ -543,3 +543,137 @@ color: #555;
     justify-content: center;
   }
 }
+
+/* Account Container */
+.account-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Adds consistent spacing between sections */
+}
+
+.account-title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #4a4a4a;
+  text-align: center;
+}
+
+/* Profile Section */
+.profile-section {
+  margin-bottom: 20px;
+}
+
+.profile-section h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.profile-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profile-item label {
+  font-size: 14px;
+  color: #555;
+  font-weight: bold;
+}
+
+.profile-item input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 100%;
+  transition: border-color 0.3s ease;
+}
+
+.profile-item input:focus {
+  border-color: #a49665;
+  outline: none;
+}
+
+/* Buttons Section */
+.update-btn, .logout-btn {
+  display: flex;
+  gap: 20px; /* Adds spacing between buttons */
+  justify-content: space-between; /* Align buttons to opposite sides */
+  margin-top: 20px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between; /* Align buttons horizontally */
+  gap: 20px; /* Add spacing between buttons */
+  margin-top: 20px;
+}
+
+/* Buttons Styling */
+.update-prof, .log-out {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.update-prof {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.update-prof:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.log-out {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.log-out:hover {
+  background-color: #e53935;
+  transform: scale(1.05);
+}
+
+/* Order History Section */
+.order-history-section {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.order-history-section h2 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.order-card {
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+.order-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.order-card strong {
+  font-size: 16px;
+  color: #333;
+}

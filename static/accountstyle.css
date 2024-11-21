@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #f7f7f7;
+  }
+  
+  header {
+    background-color: #A49665;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header .logo img {
+    width: 120px;
+    height: auto;
+  }
+  
+  header nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  header nav ul li {
+    margin-right: 20px;
+  }
+  
+  header nav ul li input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  header nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  header nav ul li a.cart-button {
+    background-color: #222;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+  }
+  
+  header nav ul li a.cart-button:hover {
+    background-color: #444;
+  }
+
+/*  Navbar */
+.navbar {
+  background-color: #A49665;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo img {
+  width: 150px;
+  height: auto;
+  cursor: pointer;
+}
+
+.navbar nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+  background-color: #ffffff;
+  color: #A49665;
+}
+
+.navbar nav ul li a.cart-button {
+  background-color: #222;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar nav ul li a.cart-button:hover {
+  background-color: #444;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #A49665, #9a8c5e);
+}
+
+.navbar nav ul li a.cart-button:hover {
+  background-color: #444;
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 10px 20px;
+  }
+
+  .navbar .logo {
+    margin-bottom: 10px;
+  }
+
+  .navbar nav ul {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+}
+
+#account-page {
+    background-color: #f7f7f7;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+}
+
+/* Account Container */
+#account-page .account-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#account-page .account-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #4a4a4a;
+    text-align: center;
+}
+
+/* Profile Section */
+#account-page .profile-section h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#account-page .profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#account-page .profile-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#account-page .profile-item label {
+    font-size: 14px;
+    color: #555;
+    font-weight: bold;
+}
+
+#account-page .profile-item input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+#account-page .profile-item input:focus {
+    border-color: #a49665;
+    outline: none;
+}
+
+/* Buttons Section */
+#account-page .button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#account-page .update-prof,
+#account-page .log-out {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#account-page .update-prof {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+#account-page .update-prof:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+#account-page .log-out {
+    background-color: #f44336;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+#account-page .log-out:hover {
+    background-color: #e53935;
+    transform: scale(1.05);
+}
+
+/* Order History Section */
+#account-page .order-history-section {
+    margin-top: 30px;
+    text-align: center;
+    padding: 20px;
+    background-color: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#account-page .order-history h1 {
+    font-size: 22px;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+}
+
+#account-page .order-card {
+    background-color: #ffffff;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    max-width: 600px;
+}
+
+#account-page .order-details {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+}
+
+#account-page .items-list {
+    padding: 10px 0;
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+#account-page .item-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+#account-page .order-status {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #666;
+    text-align: right;
+}

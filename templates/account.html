@@ -6,135 +6,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CheekyMart</title>
     <link rel="logo" type="image/x-icon" href="static/images/logo.jpg">
-    <link href="{{ url_for('static', filename='homestyle.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='accountstyle.css') }}" rel="stylesheet">
     <script src="{{ url_for('static', filename='scripts/script.js') }}" defer></script>
 </head>
 
-<header>
+<header class="navbar">
     <div class="logo">
-        <img class="logo" src="static/images/logo.png" alt="logo" width="150" height="200">
+        <a href="home">
+            <img src="static/images/logo.png" alt="CheekyMart Logo">
+        </a>
     </div>
     <nav>
-        <ul>
-            <li><a href="home">Home</a></li>
-            <li><a href="search">Search</a></li>
-            <li><a href="products">Products</a></li>
-            <li><a href="account">Account</a></li>
-            <li><a href="cart" class="cart-button">Cart</a></li>
+        <ul class="nav-links">
+            <li><a href="home" class="nav-link active">Home</a></li>
+            <li><a href="search" class="nav-link">Search</a></li>
+            <li><a href="products" class="nav-link">Products</a></li>
+            <li><a href="account" class="nav-link">Account</a></li>
+            <li><a href="cart" class="nav-link cart-button">Cart</a></li>
         </ul>
     </nav>
 </header>
 
 
 <body>
-    
-    <section class="account-container">
-        <h1>Your Account</h1>
-        <div class="profile-section">
-            <h2>Profile Information</h2>
-            <!-- made this a form so you can change it at any point on the page -->
-            <form action="/update" method="POST" id="profile-form">
-                <div class="profile-info">
-                    <div class="profile-item">
-                        <label for="username">Username:</label>
-                        <input type="text" name="username" id="username" value="{{ user.username }}">
+    <div id="account-page">
+        <section class="account-container">
+            <h1 class="account-title">Your Account</h1>
+            <div class="profile-section">
+                <h2>Profile Information</h2>
+                <form action="/update" method="POST" id="profile-form">
+                    <div class="profile-info">
+                        <div class="profile-item">
+                            <label for="username">Username:</label>
+                            <input type="text" name="username" id="username" value="{{ user.username }}">
+                        </div>
+                        <div class="profile-item">
+                            <label for="firstname">First Name:</label>
+                            <input type="text" name="first_name" id="firstname" value="{{ user.first_name }}">
+                        </div>
+                        <div class="profile-item">
+                            <label for="lastname">Last Name:</label>
+                            <input type="text" name="last_name" id="lastname" value="{{ user.last_name }}">
+                        </div>
+                        <div class="profile-item">
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" id="email" value="{{ user.email }}">
+                        </div>
+                        <div class="profile-item">
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" name="phone" id="phone" value="{{ user.phone }}">
+                        </div>
                     </div>
-            
-                    <div class="profile-item">
-                        <label for="firstname">First Name:</label>
-                        <input type="text" name="first_name" id="firstname" value="{{ user.first_name }}">
+                    <div class="button-group">
+                        <button type="submit" class="update-prof">Update Profile</button>
+                        <a href="{{ url_for('logout') }}" class="log-out">Log Out</a>
                     </div>
-            
-                    <div class="profile-item">
-                        <label for="lastname">Last Name:</label>
-                        <input type="text" name="last_name" id="lastname" value="{{ user.last_name }}">
-                    </div>
-            
-                    <div class="profile-item">
-                        <label for="email">Email:</label>
-                        <input type="email" name="email" id="email" value="{{ user.email }}">
-                    </div>
-            
-                    <div class="profile-item">
-                        <label for="phone">Phone Number:</label>
-                        <input type="tel" name="phone" id="phone" value="{{ user.phone }}">
-                    </div>
-                </div>
-                <div class="update-btn">
-                    <button type="submit" class="update-prof">Update Profile</button>
-                </div>
-            </form>
-        </div>
-        <div class="logout-btn">
-            <a href="{{ url_for('logout') }}">
-                <button class="log-out">Log Out</button>
-            </a>
-        </div>
-
-        <div class="order-history-section">
-            <div class="order-history">
-                <h1>Order History</h1>
-                {% for order in orders %}
-                    <tr><strong><u>Order Details</u></strong></tr>
-                    {% for item in order['items'] %}
-                        <tr>
-                            {% set price = ((item['quantity'] | float) * (item['price'] | float)) %}
-                            <td>
-                                <p>{{ item['name'] }} x {{ item['quantity'] }} = ${{ price }} </p>
-                            </td>
-                        </tr>
-                    {% endfor %}
-                    <tr>
-                        <td>Status: {{ order['status'] }}</td>
-                        <br>
-                    </tr>
-                    <br>
-                {% endfor %}
+                </form>
             </div>
-        </div>
-    </section>
-    <!-- this is the script things to make sure users arent inputting random characters or invalid phone/emails  -->
-    <script>
-        document.getElementById('profile-form').onsubmit = function() {
-            const email = document.getElementById('email').value;
-            let phone = document.getElementById('phone').value;
-            const username = document.getElementById('username').value;
-            const firstName = document.getElementById('firstname').value;
-            const lastName = document.getElementById('lastname').value;
-    
-            const specialCharRegex = /[^a-zA-Z0-9]/;
 
-            phone = phone.replace(/[^0-9]/g, '');
+            <div class="order-history-section">
+                <div class="order-history">
+                    <h1>Order History</h1>
+                    {% for order in orders %}
+                    <div class="order-card">
+                        <div class="order-details">
+                            <strong><u>Order Details</u></strong>
+                        </div>
+                        <div class="items-list">
+                            {% for item in order['items'] %}
+                            <div class="item-row">
+                                {% set price = ((item['quantity'] | float) * (item['price'] | float)) %}
+                                <p>{{ item['name'] }} x {{ item['quantity'] }} = ${{ price }}</p>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="order-status">
+                            <p><strong>Status:</strong> {{ order['status'] }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>            
+        </section>
+        <!-- this is the script things to make sure users arent inputting random characters or invalid phone/emails  -->
+        <script>
+            document.getElementById('profile-form').onsubmit = function () {
+                const email = document.getElementById('email').value;
+                let phone = document.getElementById('phone').value;
+                const username = document.getElementById('username').value;
+                const firstName = document.getElementById('firstname').value;
+                const lastName = document.getElementById('lastname').value;
 
-            if (!email.includes('@')) {
-                alert('Please enter a valid email.');
-                return false;
-            }
+                const specialCharRegex = /[^a-zA-Z0-9]/;
 
-            if (!/^\d{10}$/.test(phone)) {
-                alert('Please enter a valid 10-digit phone number.');
-                return false;
-            }
+                phone = phone.replace(/[^0-9]/g, '');
 
-            if (specialCharRegex.test(username)) {
-                alert('Username should not contain special characters.');
-                return false;
-            }
+                if (!email.includes('@')) {
+                    alert('Please enter a valid email.');
+                    return false;
+                }
 
-            if (specialCharRegex.test(firstName)) {
-                alert('First Name should not contain special characters.');
-                return false;
-            }
+                if (!/^\d{10}$/.test(phone)) {
+                    alert('Please enter a valid 10-digit phone number.');
+                    return false;
+                }
 
-            if (specialCharRegex.test(lastName)) {
-                alert('Last Name should not contain special characters.');
-                return false;
-            }
-    
-            return true;
-        };
-    </script>
-    
+                if (specialCharRegex.test(username)) {
+                    alert('Username should not contain special characters.');
+                    return false;
+                }
+
+                if (specialCharRegex.test(firstName)) {
+                    alert('First Name should not contain special characters.');
+                    return false;
+                }
+
+                if (specialCharRegex.test(lastName)) {
+                    alert('Last Name should not contain special characters.');
+                    return false;
+                }
+
+                return true;
+            };
+        </script>
+
 </body>
 
 </html>
