@@ -9,20 +9,22 @@
     <script src="{{ url_for('static', filename='scripts/script.js') }}" defer></script>
 </head>
 <body>
-    <header>
+    <header class="navbar">
         <div class="logo">
-            <img class="logo" src="static/images/logo.png" alt="logo" width="150" height="200">
+          <a href="home">
+            <img src="static/images/logo.png" alt="CheekyMart Logo">
+          </a>
         </div>
         <nav>
-            <ul>
-                <li><a href="home">Home</a></li>
-                <li><a href="search">Search</a></li>
-                <li><a href="products">Products</a></li>
-                <li><a href="account">Account</a></li>
-                <li><a href="cart" class="cart-button">Cart</a></li>
-            </ul>
+          <ul class="nav-links">
+            <li><a href="home" class="nav-link active">Home</a></li>
+            <li><a href="search" class="nav-link">Search</a></li>
+            <li><a href="products" class="nav-link">Products</a></li>
+            <li><a href="account" class="nav-link">Account</a></li>
+            <li><a href="cart" class="nav-link cart-button">Cart</a></li>
+          </ul>
         </nav>
-    </header>
+      </header>
     <div class="login-container">
         <div class="login-box">
             <form method="POST" action="/">
